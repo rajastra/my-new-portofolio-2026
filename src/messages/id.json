@@ -12,7 +12,9 @@
     "language": "English",
     "languageShort": "EN",
     "themeLight": "Ganti ke tema terang",
-    "themeDark": "Ganti ke tema gelap"
+    "themeDark": "Ganti ke tema gelap",
+    "code": "Kode",
+    "sections": "Bagian"
   },
   "view": {
     "label": "Lihat sebagai",
@@ -28,9 +30,10 @@
   },
   "projects": {
     "title": "Proyek",
-    "intro": "Pekerjaan klien terikat NDA, jadi studi kasus ini menjelaskan masalah dan pendekatannya, bukan kode sumbernya.",
+    "intro": "Proyek klien terikat NDA. Studi kasus ini menampilkan layar asli tanpa data pribadi dan keuangan, serta menjelaskan pendekatannya tanpa membagikan kode sumber.",
     "confidential": "Proyek klien, kode tidak publik",
-    "open": "Buka studi kasus"
+    "open": "Buka studi kasus",
+    "confidentialShots": "Proyek klien, kode tidak publik. Layar hanya menampilkan data yang aman dibagikan."
   },
   "project": {
     "back": "Semua proyek",
@@ -71,5 +74,12 @@
   "notFound": {
     "title": "Halaman tidak ditemukan",
     "home": "Kembali ke beranda"
+  },
+  "openSource": {
+    "title": "Kode publik",
+    "intro": "Proyek sampingan dengan kode sumber dan demo live, untuk engineer yang ingin membaca kodenya.",
+    "demo": "Demo live",
+    "repo": "Kode",
+    "noImage": "Tanpa pratinjau"
   }
 }

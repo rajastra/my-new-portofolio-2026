@@ -7,8 +7,8 @@ Claude owns: requirements, design direction, architecture, content writing, the 
 reviewing diffs, and running gates. agy does bulk, mechanical work — **only above break-even**.
 
 ### Delegate to agy (via `antigravity-delegate` subagent or `/antigravity:delegate`)
-- Initial scaffold: Next.js + Tailwind + shadcn + next-intl + Vitest/Playwright config.
-- Generating many similar files: shadcn components, section skeletons, `messages/id.json` translation from `en.json`.
+- Bulk, mechanical, well-specified work (new sections from a written spec, translations, tests).
+- Generating many similar files: section skeletons, `messages/id.json` translation from `en.json`.
 - Exhaustive tests for components/content loaders Claude already specified.
 - Whole test-covered features ≥ ~200 lines: `/antigravity:handoff --dir . --tests <files> "<req>"`.
 - Web research (design references, library comparisons): `/antigravity:research`.

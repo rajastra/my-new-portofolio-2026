@@ -6,9 +6,23 @@ export type PerView<T> = Record<View, T>;
 
 export type Link = { label: string; href: string };
 
+export type Photo = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+/** A screenshot of real work. `device` sets the frame and aspect ratio. */
+export type Shot = Photo & {
+  device: "desktop" | "mobile";
+  caption: string;
+};
+
 export type Profile = {
   name: string;
   role: string;
+  photo: Photo;
   location: string;
   availability: string;
   email: string;
@@ -53,9 +67,21 @@ export type Project = {
     decisions: { title: string; body: string }[];
     stack: string[];
   };
-  /** Client work: no source or screenshots can be shown. */
+  /** Client work: source can't be shared. Screenshots use dummy or masked data. */
   confidential: boolean;
+  shots?: Shot[];
   links?: Link[];
+};
+
+/** Public side project with code (and ideally a live demo). */
+export type OpenSource = {
+  name: string;
+  summary: PerView<string>;
+  stack: string[];
+  repo: string;
+  demo?: string;
+  year: string;
+  image?: Photo;
 };
 
 export type SkillGroup = { name: string; items: string[] };
@@ -72,6 +98,7 @@ export type Content = {
   profile: Profile;
   experience: Experience[];
   projects: Project[];
+  openSource: OpenSource[];
   skills: SkillGroup[];
   education: Education[];
 };

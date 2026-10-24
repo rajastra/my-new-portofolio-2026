@@ -7,6 +7,7 @@ import { en } from "@/content/en";
 import { getProject } from "@/content";
 import { Only } from "@/components/ui/only";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ShotGallery } from "@/components/work/shot-gallery";
 
 export function generateStaticParams() {
   return en.projects.map((project) => ({ slug: project.slug }));
@@ -46,7 +47,10 @@ export default async function ProjectPage({
   return (
     <article className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
       <div className="max-w-[65ch]">
-        <Link href="/#projects" className="text-sm font-medium text-jade hover:underline">
+        <Link
+          href="/#projects"
+          className="-ml-1 inline-flex min-h-11 items-center px-1 text-base font-medium text-jade hover:underline"
+        >
           {t("back")}
         </Link>
 
@@ -67,8 +71,16 @@ export default async function ProjectPage({
             ))}
           </dl>
         )}
+      </div>
 
-        <Only view="recruiter" className="mt-10 space-y-8">
+      {project.shots?.length ? (
+        <div className="mt-12">
+          <ShotGallery shots={project.shots} />
+        </div>
+      ) : null}
+
+      <div className="max-w-[65ch]">
+        <Only view="recruiter" className="mt-12 space-y-8">
           <section>
             <h2 className="text-xl font-semibold text-ink">{t("problem")}</h2>
             <p className="mt-3 text-base leading-relaxed text-ink">{project.recruiter.problem}</p>
@@ -89,7 +101,7 @@ export default async function ProjectPage({
           </section>
         </Only>
 
-        <Only view="engineer" className="mt-10 space-y-8">
+        <Only view="engineer" className="mt-12 space-y-8">
           <section>
             <h2 className="text-xl font-semibold text-ink">{t("architecture")}</h2>
             <ul className="mt-3 list-disc list-inside space-y-2 text-base leading-relaxed text-ink">
@@ -121,7 +133,7 @@ export default async function ProjectPage({
 
         {project.confidential && (
           <p className="mt-10 border-t border-rule pt-6 text-sm text-slate">
-            {tp("confidential")}
+            {tp(project.shots?.length ? "confidentialShots" : "confidential")}
           </p>
         )}
 

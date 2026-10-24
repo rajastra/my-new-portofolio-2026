@@ -23,7 +23,7 @@ export async function ExperienceTimeline({
           const endDate = item.end ? formatMonth(item.end, locale) : t("present");
 
           return (
-            <li key={`${item.company}-${item.start}`} className="py-8">
+            <li key={`${item.company}-${item.start}`} className="py-6">
               <div className="grid gap-2 md:grid-cols-12 md:gap-6">
                 <div className="text-sm text-slate md:col-span-3">
                   {startDate} – {endDate}
@@ -34,15 +34,9 @@ export async function ExperienceTimeline({
                     {item.company}, {item.place}
                   </p>
 
-                  <Only view="recruiter" className="mt-3">
+                  {/* Recruiters get one line per role; the details live in the case studies. */}
+                  <Only view="recruiter" className="mt-2">
                     <p className="max-w-[65ch] text-base text-ink">{item.summary.recruiter}</p>
-                    {item.highlights.recruiter.length > 0 && (
-                      <ul className="mt-2 list-disc list-inside space-y-1 text-sm text-slate">
-                        {item.highlights.recruiter.map((h, i) => (
-                          <li key={i}>{h}</li>
-                        ))}
-                      </ul>
-                    )}
                   </Only>
 
                   <Only view="engineer" className="mt-3">
@@ -60,12 +54,13 @@ export async function ExperienceTimeline({
                   </Only>
 
                   {item.project && (
-                    <div className="mt-4">
+                    <div className="mt-2">
                       <Link
                         href={`/projects/${item.project}`}
-                        className="text-sm font-medium text-jade hover:underline"
+                        className="-ml-1 inline-flex min-h-11 items-center px-1 text-base font-medium text-jade underline-offset-4 hover:underline"
                       >
                         {t("caseStudy")}
+                        <span className="sr-only">, {item.company}</span>
                       </Link>
                     </div>
                   )}

@@ -9,6 +9,12 @@ export const id: Content = {
   profile: {
     name: "Raja Saputera",
     role: "Frontend Engineer",
+    photo: {
+      src: "/photo/raja-saputera.jpg",
+      alt: "Foto Raja Saputera mengenakan kemeja kotak-kotak hijau",
+      width: 960,
+      height: 1200,
+    },
     location: "Jakarta, Indonesia",
     availability: "Terbuka untuk kerja remote dan relokasi",
     email: "rajasaputera@gmail.com",
@@ -146,10 +152,44 @@ export const id: Content = {
   projects: [
     {
       slug: "school-erp",
-      title: "School ERP",
+      title: "ERP Sekolah",
       client: "Future Gate High School",
       period: "2023 – sekarang",
       confidential: true,
+      shots: [
+        {
+          src: "/work/school-erp/home-desktop.jpg",
+          alt: "Beranda ERP: sapaan, presensi, jadwal mengajar, info yayasan, aksi cepat, dan daftar modul",
+          caption: "Beranda: setiap peran mulai dari sini dan hanya melihat modul yang boleh dipakainya.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+        {
+          src: "/work/school-erp/home-mobile.jpg",
+          alt: "Beranda ERP yang sama di ponsel",
+          caption: "Beranda yang sama di ponsel guru.",
+          device: "mobile",
+          width: 780,
+          height: 1688,
+        },
+        {
+          src: "/work/school-erp/admissions-desktop.jpg",
+          alt: "Dashboard PSB berisi daftar tindakan pendaftaran, sebaran status pendaftar, dan gelombang aktif",
+          caption: "PSB: apa yang perlu ditindaklanjuti hari ini, bukan sekadar tabel.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+        {
+          src: "/work/school-erp/learning-desktop.jpg",
+          alt: "Dashboard Pembelajaran dengan progres kelas, materi terbaru, dan roadmap modul",
+          caption: "Pembelajaran: progres kelas dibandingkan rencana semester.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+      ],
       summary: {
         recruiter: "Lima modul yang menjalankan operasional sekolah sehari-hari, dari admisi hingga penggajian.",
         engineer: "Satu frontend React + TypeScript, lima modul, 20+ REST API, antarmuka berbasis peran.",
@@ -191,10 +231,28 @@ export const id: Content = {
     },
     {
       slug: "ukm-booking",
-      title: "Dorm & hotel booking",
+      title: "Booking asrama & hotel",
       client: "Chup, untuk Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
       confidential: true,
+      shots: [
+        {
+          src: "/work/ukm-booking/listing-desktop.jpg",
+          alt: "Pencarian properti StayUKM: filter dalam dan luar kampus, serta kartu properti dengan slot tersedia",
+          caption: "Cari dan saring hunian di dalam maupun luar kampus.",
+          device: "desktop",
+          width: 2560,
+          height: 1600,
+        },
+        {
+          src: "/work/ukm-booking/listing-mobile.jpg",
+          alt: "Pencarian properti StayUKM di ponsel",
+          caption: "Kebanyakan mahasiswa memesan dari ponsel.",
+          device: "mobile",
+          width: 780,
+          height: 1688,
+        },
+      ],
       summary: {
         recruiter: "Bagaimana 5.000+ mahasiswa UKM memesan kamar asrama atau hotel dan membayar secara online.",
         engineer: "Full-stack: alur booking React, REST API Express, integrasi payment gateway.",
@@ -228,8 +286,8 @@ export const id: Content = {
     },
     {
       slug: "waste-scanner",
-      title: "Waste-scanning app backend & admin dashboard",
-      client: "Bangkit Academy capstone",
+      title: "Backend & dashboard aplikasi pemindai sampah",
+      client: "Capstone Bangkit Academy",
       period: "2023",
       confidential: false,
       summary: {
@@ -250,11 +308,14 @@ export const id: Content = {
         decisions: [],
         stack: ["React", "Node.js", "REST", "GCP"],
       },
-      links: [{ label: "GitHub", href: "https://github.com/rajastra" }],
+      links: [
+        { label: "Kode dashboard di GitHub", href: "https://github.com/rajastra/rewaste-frontend" },
+        { label: "Dashboard live", href: "https://rewaste-frontend.vercel.app" },
+      ],
     },
     {
       slug: "dpr-revamp",
-      title: "DPR website revamp",
+      title: "Revamp situs web DPR",
       client: "DOT Indonesia",
       period: "2023",
       confidential: true,
@@ -276,12 +337,50 @@ export const id: Content = {
     },
   ],
 
+  openSource: [
+    {
+      name: "Taktix",
+      year: "2025",
+      summary: {
+        recruiter: "Platform latihan ujian untuk UTBK, CPNS, dan sekolah kedinasan.",
+        engineer: "Aplikasi Next.js + TypeScript dengan autentikasi JWT, alur latihan soal, dan grafik skor (Chart.js, ApexCharts).",
+      },
+      stack: ["Next.js", "TypeScript", "Flowbite", "Chart.js", "JWT"],
+      repo: "https://github.com/rajastra/taktix-web",
+      demo: "https://taktix-web-ashen.vercel.app",
+      image: { src: "/work/oss/taktix.jpg", alt: "Beranda Taktix dengan kategori ujian: UTBK, CPNS, dan kedinasan", width: 1920, height: 1200 },
+    },
+    {
+      name: "Dashboard ReWaste",
+      year: "2023",
+      summary: {
+        recruiter: "Dashboard admin untuk aplikasi capstone Bangkit yang menyarankan kerajinan dari sampah.",
+        engineer: "Admin React + Ant Design dengan autentikasi token dan CRUD penuh ke REST API capstone.",
+      },
+      stack: ["React", "Ant Design", "React Router", "REST"],
+      repo: "https://github.com/rajastra/rewaste-frontend",
+      demo: "https://rewaste-frontend.vercel.app",
+    },
+    {
+      name: "Katalog Film",
+      year: "2023",
+      summary: {
+        recruiter: "Katalog film yang sedang tayang, lengkap dengan rating dan sinopsis.",
+        engineer: "Halaman Next.js + TypeScript di atas API film publik, dengan Ant Design.",
+      },
+      stack: ["Next.js", "TypeScript", "Ant Design"],
+      repo: "https://github.com/rajastra/movie-list",
+      demo: "https://movie-list-henna-pi.vercel.app",
+      image: { src: "/work/oss/movie-list.jpg", alt: "Grid Katalog Film berisi film yang sedang tayang beserta rating", width: 1920, height: 1200 },
+    },
+  ],
+
   skills: [
-    { name: "Languages", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS"] },
-    { name: "Frameworks", items: ["React", "Next.js", "Node.js", "Express"] },
+    { name: "Bahasa", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS"] },
+    { name: "Framework", items: ["React", "Next.js", "Node.js", "Express"] },
     { name: "State", items: ["Redux", "Zustand", "Context API"] },
     { name: "Testing", items: ["Jest", "React Testing Library"] },
-    { name: "Practices", items: ["REST API integration", "OOP", "Dependency injection", "Agile / Scrum"] },
+    { name: "Praktik", items: ["Integrasi REST API", "OOP", "Dependency injection", "Agile / Scrum"] },
     { name: "Tools", items: ["Git, GitHub, GitLab", "Google Cloud Platform", "Jira", "Trello", "Slack"] },
   ],
 

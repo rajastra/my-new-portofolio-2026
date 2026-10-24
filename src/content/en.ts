@@ -9,6 +9,12 @@ export const en: Content = {
   profile: {
     name: "Raja Saputera",
     role: "Frontend Engineer",
+    photo: {
+      src: "/photo/raja-saputera.jpg",
+      alt: "Portrait of Raja Saputera in a green checked shirt",
+      width: 960,
+      height: 1200,
+    },
     location: "Jakarta, Indonesia",
     availability: "Open to remote work and relocation",
     email: "rajasaputera@gmail.com",
@@ -150,6 +156,40 @@ export const en: Content = {
       client: "Future Gate High School",
       period: "2023 – now",
       confidential: true,
+      shots: [
+        {
+          src: "/work/school-erp/home-desktop.jpg",
+          alt: "ERP home screen: greeting, attendance, teaching schedule, foundation announcements, quick actions and the module launcher",
+          caption: "Home: every role starts here and only sees the modules it can use.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+        {
+          src: "/work/school-erp/home-mobile.jpg",
+          alt: "The same ERP home screen on a phone",
+          caption: "The same home on a teacher's phone.",
+          device: "mobile",
+          width: 780,
+          height: 1688,
+        },
+        {
+          src: "/work/school-erp/admissions-desktop.jpg",
+          alt: "Admissions dashboard with a to-do list for registrations, applicant status breakdown and the active intake wave",
+          caption: "Admissions: what needs action today, not a raw table.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+        {
+          src: "/work/school-erp/learning-desktop.jpg",
+          alt: "Learning dashboard with class progress bars, latest materials and the module roadmap",
+          caption: "Learning: class progress against the semester plan.",
+          device: "desktop",
+          width: 2880,
+          height: 1800,
+        },
+      ],
       summary: {
         recruiter: "Five modules that run a school day to day, from admissions to payroll.",
         engineer: "One React + TypeScript frontend, five modules, 20+ REST APIs, role-based views.",
@@ -195,6 +235,24 @@ export const en: Content = {
       client: "Chup, for Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
       confidential: true,
+      shots: [
+        {
+          src: "/work/ukm-booking/listing-desktop.jpg",
+          alt: "StayUKM property search: on-campus and off-campus filters and property cards with available slots",
+          caption: "Search and filter on-campus and off-campus housing.",
+          device: "desktop",
+          width: 2560,
+          height: 1600,
+        },
+        {
+          src: "/work/ukm-booking/listing-mobile.jpg",
+          alt: "StayUKM property search on a phone",
+          caption: "Most students book from their phone.",
+          device: "mobile",
+          width: 780,
+          height: 1688,
+        },
+      ],
       summary: {
         recruiter: "How 5,000+ UKM students book a dorm room or a hotel stay and pay online.",
         engineer: "Full-stack: React booking flow, Express REST API, payment gateway integration.",
@@ -247,7 +305,10 @@ export const en: Content = {
         decisions: [],
         stack: ["React", "Node.js", "REST", "GCP"],
       },
-      links: [{ label: "GitHub", href: "https://github.com/rajastra" }],
+      links: [
+        { label: "Dashboard source on GitHub", href: "https://github.com/rajastra/rewaste-frontend" },
+        { label: "Live dashboard", href: "https://rewaste-frontend.vercel.app" },
+      ],
     },
     {
       slug: "dpr-revamp",
@@ -270,6 +331,44 @@ export const en: Content = {
         decisions: [],
         stack: ["React", "Next.js", "SCSS"],
       },
+    },
+  ],
+
+  openSource: [
+    {
+      name: "Taktix",
+      year: "2025",
+      summary: {
+        recruiter: "Exam practice platform for Indonesian university entrance (UTBK), civil service (CPNS) and service-school tests.",
+        engineer: "Next.js + TypeScript app with JWT auth, practice-test flows and score charts (Chart.js, ApexCharts).",
+      },
+      stack: ["Next.js", "TypeScript", "Flowbite", "Chart.js", "JWT"],
+      repo: "https://github.com/rajastra/taktix-web",
+      demo: "https://taktix-web-ashen.vercel.app",
+      image: { src: "/work/oss/taktix.jpg", alt: "Taktix home with exam categories: UTBK, CPNS and service schools", width: 1920, height: 1200 },
+    },
+    {
+      name: "ReWaste dashboard",
+      year: "2023",
+      summary: {
+        recruiter: "Admin dashboard for the Bangkit capstone app that suggests crafts you can make from waste.",
+        engineer: "React + Ant Design admin with token auth and full CRUD over the capstone's REST API.",
+      },
+      stack: ["React", "Ant Design", "React Router", "REST"],
+      repo: "https://github.com/rajastra/rewaste-frontend",
+      demo: "https://rewaste-frontend.vercel.app",
+    },
+    {
+      name: "Movie Catalogue",
+      year: "2023",
+      summary: {
+        recruiter: "A catalogue of films now playing, with ratings and synopses.",
+        engineer: "Next.js + TypeScript pages over a public movie API, styled with Ant Design.",
+      },
+      stack: ["Next.js", "TypeScript", "Ant Design"],
+      repo: "https://github.com/rajastra/movie-list",
+      demo: "https://movie-list-henna-pi.vercel.app",
+      image: { src: "/work/oss/movie-list.jpg", alt: "Movie Catalogue grid of films now playing with ratings", width: 1920, height: 1200 },
     },
   ],
 

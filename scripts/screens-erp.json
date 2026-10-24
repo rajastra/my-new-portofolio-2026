@@ -1,0 +1,6 @@
+[
+  {"url":"http://localhost:3335/home","out":"public/work/school-erp/home-desktop.jpg","width":1440,"height":900,"delay":3000,"storageState":".auth/erp-state.json"},
+  {"url":"http://localhost:3335/ppdb/dashboard","out":"public/work/school-erp/admissions-desktop.jpg","width":1440,"height":900,"delay":3000,"storageState":".auth/erp-state.json"},
+  {"url":"http://localhost:3335/pembelajaran","out":"public/work/school-erp/learning-desktop.jpg","width":1440,"height":900,"delay":3000,"storageState":".auth/erp-state.json"},
+  {"url":"http://localhost:3335/home","out":"public/work/school-erp/home-mobile.jpg","width":390,"height":844,"delay":3000,"storageState":".auth/erp-state.json"}
+]

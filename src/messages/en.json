@@ -12,7 +12,9 @@
     "language": "Bahasa Indonesia",
     "languageShort": "ID",
     "themeLight": "Switch to light theme",
-    "themeDark": "Switch to dark theme"
+    "themeDark": "Switch to dark theme",
+    "code": "Code",
+    "sections": "Sections"
   },
   "view": {
     "label": "View as",
@@ -28,9 +30,10 @@
   },
   "projects": {
     "title": "Projects",
-    "intro": "Client work is under NDA, so these case studies describe the problem and the approach instead of showing source code.",
+    "intro": "Client work is under NDA. The case studies show real screens with personal and financial data left out, and explain the approach instead of sharing source code.",
     "confidential": "Client work, no public source",
-    "open": "Open case study"
+    "open": "Open case study",
+    "confidentialShots": "Client work, no public source. Screens show only data that is safe to share."
   },
   "project": {
     "back": "All projects",
@@ -71,5 +74,12 @@
   "notFound": {
     "title": "Page not found",
     "home": "Back to home"
+  },
+  "openSource": {
+    "title": "Public code",
+    "intro": "Side projects with source code and a live demo, for engineers who want to read the code.",
+    "demo": "Live demo",
+    "repo": "Source",
+    "noImage": "No preview"
   }
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "url": "http://localhost:3001/",
+    "out": "public/work/ukm-booking/listing-desktop.jpg",
+    "width": 1280,
+    "height": 800,
+    "waitFor": "text=View Details",
+    "hide": [".TanStackRouterDevtoolsPanel", "button[aria-label='Open TanStack Router Devtools']", ".tsqd-open-btn-container"]
+  },
+  {
+    "url": "http://localhost:3001/",
+    "out": "public/work/ukm-booking/listing-mobile.jpg",
+    "width": 390,
+    "height": 844,
+    "waitFor": "text=View Details",
+    "hide": [".TanStackRouterDevtoolsPanel", "button[aria-label='Open TanStack Router Devtools']", ".tsqd-open-btn-container"]
+  }
+]
