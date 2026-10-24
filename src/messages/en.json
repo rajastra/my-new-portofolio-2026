@@ -78,7 +78,8 @@
   },
   "notFound": {
     "title": "Page not found",
-    "home": "Back to home"
+    "home": "Back to home",
+    "text": "This address does not exist. The work is still here."
   },
   "openSource": {
     "title": "Public code",

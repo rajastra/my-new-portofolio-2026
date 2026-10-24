@@ -9,6 +9,8 @@ import { useEffect } from "react";
  */
 export function RevealObserver() {
   useEffect(() => {
+    // Backstop for the pre-paint script, in case a client render replaced <html>'s attributes.
+    document.documentElement.dataset.js = "";
     if (!("IntersectionObserver" in window)) {
       document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
       return;

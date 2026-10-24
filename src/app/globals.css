@@ -99,7 +99,8 @@ html[data-view="engineer"] [data-only="recruiter"] {
 }
 
 /* ---------- Motion ----------
-   Hidden states live only inside no-preference, so reduced-motion readers and
+   Hidden states need [data-js] (set by the pre-paint script, an attribute React leaves
+   alone) and live only inside no-preference, so reduced-motion readers and
    browsers without support always see the content. */
 .lines .line {
   display: block;
@@ -113,12 +114,12 @@ html[data-view="engineer"] [data-only="recruiter"] {
 
 @media (prefers-reduced-motion: no-preference) {
   /* Signature move: each headline line rises from behind its baseline. */
-  .js .lines [data-line] {
+  [data-js] .lines [data-line] {
     transform: translateY(105%);
     animation: line-up 900ms var(--ease-out) forwards;
     animation-delay: calc(var(--i, 0) * 110ms + 150ms);
   }
-  .js [data-load] {
+  [data-js] [data-load] {
     opacity: 0;
     transform: translateY(12px);
     animation: rise 500ms var(--ease-out) forwards;
@@ -134,13 +135,13 @@ html[data-view="engineer"] [data-only="recruiter"] {
   }
 
   /* Every section's parts rise once as they enter (RevealObserver adds .in), staggered by --i. */
-  .js .reveal {
+  [data-js] .reveal {
     transition:
       opacity 600ms var(--ease-out),
       transform 700ms var(--ease-out);
     transition-delay: calc(var(--i, 0) * 80ms);
   }
-  .js .reveal:not(.in) {
+  [data-js] .reveal:not(.in) {
     opacity: 0;
     transform: translateY(24px);
   }

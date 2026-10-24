@@ -78,7 +78,8 @@
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",
-    "home": "Kembali ke beranda"
+    "home": "Kembali ke beranda",
+    "text": "Alamat ini tidak ada. Karya saya masih ada di sini."
   },
   "openSource": {
     "title": "Kode publik",

@@ -14,6 +14,7 @@ const browser = await chromium.launch();
 for (const s of shots) {
   const context = await browser.newContext({
     storageState: s.storageState,
+    colorScheme: s.colorScheme ?? "light",
     viewport: { width: s.width, height: s.height },
     deviceScaleFactor: s.scale ?? 2,
     isMobile: s.width < 600,
@@ -29,6 +30,16 @@ for (const s of shots) {
     await page.evaluate((sels) => {
       for (const sel of sels) document.querySelectorAll(sel).forEach((el) => (el.textContent = "•••••"));
     }, s.mask);
+  }
+  if (s.fullPage) {
+    // Scroll through once so one-time reveals fire before the full-page shot.
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += window.innerHeight / 2) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 120));
+      }
+      window.scrollTo(0, 0);
+    });
   }
   await page.waitForTimeout(s.delay ?? 500);
   mkdirSync(dirname(s.out), { recursive: true });

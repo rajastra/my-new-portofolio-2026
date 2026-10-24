@@ -65,6 +65,17 @@ test.describe("Home page & role view switcher", () => {
     expect(caseViolations).toEqual([]);
   });
 
+  test("a11y in dark mode: no serious or critical violations on / and case study", async ({ page }) => {
+    await page.emulateMedia({ colorScheme: "dark", reducedMotion: "reduce" });
+    for (const path of ["/", "/projects/ukm-booking"]) {
+      await page.goto(path);
+      await expect(page.locator("html")).toHaveClass(/dark/);
+      const scan = await new AxeBuilder({ page }).analyze();
+      const serious = scan.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
+      expect(serious, path).toEqual([]);
+    }
+  });
+
   test("submitting empty contact form shows three field errors", async ({ page }) => {
     await page.goto("/");
     const submitBtn = page.getByRole("button", { name: /send/i });

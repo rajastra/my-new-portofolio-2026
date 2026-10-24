@@ -13,7 +13,7 @@ Full plan: `docs/PLAN.md`. Content source of truth: `src/content/` (never hard-c
 - Next.js 16 (App Router, `cacheComponents`) + React 19 + TypeScript (`strict: true`)
 - Tailwind CSS v4 with our own small components in `src/components/ui` (no shadcn) + lucide-react icons
 - Motion: CSS plus one small observer (`reveal-observer.tsx`): masked headline lines on load, `.reveal` parts that rise once,
-  `.press` feedback, `.drift` on the big screenshot. Hidden states only under `html.js` + motion allowed.
+  `.press` feedback, `.drift` on the big screenshot. Hidden states only under `[data-js]` + motion allowed.
 - Content: typed TypeScript data in `src/content/{en,id}.ts` (no MDX), images in `public/`
 - next-intl for i18n: English (default) + Bahasa Indonesia; next-themes for dark mode
 - Zod for validation, react-hook-form for the contact form, Resend for email
