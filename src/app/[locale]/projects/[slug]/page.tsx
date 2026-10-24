@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { Suspense, type CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -33,11 +33,21 @@ export async function generateMetadata({
 
 const i = (n: number) => ({ "--i": n }) as CSSProperties;
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>;
-}) {
+type Params = Promise<{ locale: string; slug: string }>;
+
+/**
+ * The params read lives in a child inside <Suspense>, so the route keeps a URL-independent
+ * shell for instant navigation (Next 16 partial prefetching). Every slug is still prerendered.
+ */
+export default function ProjectPage({ params }: { params: Params }) {
+  return (
+    <Suspense fallback={<article aria-busy className="min-h-[80svh]" />}>
+      <ProjectContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectContent({ params }: { params: Params }) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
   setRequestLocale(locale);

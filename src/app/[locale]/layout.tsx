@@ -48,7 +48,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       <head>
         <ViewScript />
       </head>
-      <body className="min-h-dvh bg-paper text-ink antialiased">
+      {/* Browser extensions (e.g. anti-trackers) add attributes to <body> before React loads. */}
+      <body suppressHydrationWarning className="min-h-dvh bg-paper text-ink antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <SiteHeader locale={locale} profile={profile} />
