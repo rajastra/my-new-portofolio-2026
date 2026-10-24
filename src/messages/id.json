@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Raja Saputera — Frontend Engineer",
+    "title": "Raja Saputera, Frontend Engineer",
     "description": "Frontend engineer yang membangun antarmuka berbasis peran dengan React, Next.js, dan TypeScript: sistem ERP sekolah dan platform booking."
   },
   "nav": {
@@ -56,13 +56,13 @@
   },
   "contact": {
     "title": "Kontak",
-    "intro": "Sedang mencari frontend engineer, atau punya proyek? Kirim pesan dan saya balas dalam dua hari kerja.",
+    "intro": "Sedang mencari frontend engineer, atau punya proyek? Kirim pesan dan saya akan membalas lewat email.",
     "name": "Nama",
     "email": "Email",
     "message": "Pesan",
     "send": "Kirim pesan",
     "sending": "Mengirim…",
-    "sent": "Pesan terkirim. Saya akan membalas ke email Anda dalam dua hari kerja.",
+    "sent": "Pesan terkirim. Saya akan membalas ke email Anda.",
     "errorName": "Isi nama Anda.",
     "errorEmail": "Isi alamat email seperti nama@perusahaan.com.",
     "errorMessage": "Tulis minimal 20 karakter supaya saya tahu maksud pesannya.",

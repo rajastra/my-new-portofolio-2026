@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Raja Saputera — Frontend Engineer",
+    "title": "Raja Saputera, Frontend Engineer",
     "description": "Frontend engineer building role-based interfaces with React, Next.js and TypeScript: school ERP systems and booking platforms."
   },
   "nav": {
@@ -56,13 +56,13 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Hiring for a frontend role, or have a project in mind? Send a message and I'll reply within two working days.",
+    "intro": "Hiring for a frontend role, or have a project in mind? Send a message and I will reply by email.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "send": "Send message",
     "sending": "Sending…",
-    "sent": "Message sent. I'll reply to your email within two working days.",
+    "sent": "Message sent. I will reply to your email.",
     "errorName": "Enter your name.",
     "errorEmail": "Enter an email address like name@company.com.",
     "errorMessage": "Write at least 20 characters so I know what it's about.",

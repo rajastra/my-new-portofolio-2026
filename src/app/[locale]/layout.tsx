@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: t("title"), template: `%s · Raja Saputera` },
+    title: { default: t("title"), template: `%s | Raja Saputera` },
     description: t("description"),
     alternates: {
       canonical: locale === "en" ? "/" : `/${locale}`,

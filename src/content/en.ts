@@ -2,8 +2,7 @@ import type { Content } from "./types";
 
 /**
  * English content. Source: Resume_Frontend_Raja_Saputera_new_2026 (Oct 2026).
- * Engineer-view details marked REVIEW are inferred from the CV and must be
- * confirmed by Raja before release.
+ * Every claim must be backed by the CV or LinkedIn. Do not add numbers or outcomes from elsewhere.
  */
 export const en: Content = {
   profile: {
@@ -28,7 +27,7 @@ export const en: Content = {
       recruiter:
         "Frontend engineer with 3+ years of experience building school ERP systems and booking platforms with React, Next.js and TypeScript. I currently lead the frontend of a 5-module ERP at Future Gate High School, and I built the booking platform used by 5,000+ students at Universiti Kebangsaan Malaysia.",
       engineer:
-        "Most of my work is role-based UI: one data model, many views. Admissions, HR, finance and inventory screens that share state across 20+ REST endpoints, forms that guard real money, and booking flows that have to work on a student's phone.",
+        "Most of my work is role-based UI: the same data, shown differently to each role. At the school that means admissions, HR, finance and inventory screens that share state across 20+ REST APIs. At Chup Online it was a responsive booking flow with online payment.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
   },
@@ -42,7 +41,7 @@ export const en: Content = {
       end: null,
       project: "school-erp",
       summary: {
-        recruiter: "Leads the frontend of the school's ERP, used by 400+ staff and students.",
+        recruiter: "Leads the frontend of the school's ERP, which has 400+ users.",
         engineer: "Frontend architecture for 5 ERP modules in React + TypeScript, Redux/Zustand, 20+ REST APIs.",
       },
       highlights: {
@@ -73,7 +72,7 @@ export const en: Content = {
       highlights: {
         recruiter: [
           "Built the booking platform used by 5,000+ active students at Universiti Kebangsaan Malaysia.",
-          "Made online payment for dorm rentals and hotel stays possible end to end.",
+          "Added online payment for dorm rentals and hotel stays, from the booking screen to the server.",
           "Worked remotely in an Agile team of 10+ developers and designers across Indonesia and Malaysia.",
         ],
         engineer: [
@@ -92,7 +91,7 @@ export const en: Content = {
       end: "2023-07",
       project: "waste-scanner",
       summary: {
-        recruiter: "Selected for Google-led training; built an admin dashboard and a cloud backend.",
+        recruiter: "Built an admin dashboard and worked on a cloud backend in Google's Bangkit program.",
         engineer: "React admin dashboard on a REST API; backend for a waste-scanning app deployed on GCP.",
       },
       highlights: {
@@ -144,7 +143,7 @@ export const en: Content = {
         {
           src: "/work/school-erp/home-desktop.jpg",
           alt: "ERP home screen: greeting, attendance, teaching schedule, foundation announcements, quick actions and the module launcher",
-          caption: "Home: every role starts here and only sees the modules it can use.",
+          caption: "Home screen, where every user role starts.",
           device: "desktop",
           width: 2880,
           height: 1800,
@@ -152,7 +151,7 @@ export const en: Content = {
         {
           src: "/work/school-erp/home-mobile.jpg",
           alt: "The same ERP home screen on a phone",
-          caption: "The same home on a teacher's phone.",
+          caption: "The same home screen on a phone.",
           device: "mobile",
           width: 780,
           height: 1688,
@@ -160,7 +159,7 @@ export const en: Content = {
         {
           src: "/work/school-erp/admissions-desktop.jpg",
           alt: "Admissions dashboard with a to-do list for registrations, applicant status breakdown and the active intake wave",
-          caption: "Admissions: what needs action today, not a raw table.",
+          caption: "Admissions dashboard with the registrations that need action today.",
           device: "desktop",
           width: 2880,
           height: 1800,
@@ -180,12 +179,12 @@ export const en: Content = {
       },
       metrics: [
         { value: "5", label: "modules shipped" },
-        { value: "400+", label: "daily users" },
+        { value: "400+", label: "users" },
         { value: "20+", label: "REST APIs integrated" },
       ],
       recruiter: {
         problem:
-          "The school ran admissions, academics, HR, finance and inventory on separate tools and spreadsheets, so staff entered the same data many times.",
+          "The school needed one system for admissions, academics, HR, finance and inventory, with screens suited to each department.",
         role: "I lead the frontend: architecture, the screens for each department, and integration with the backend team's APIs.",
         outcome: [
           "Every department works in one system, with screens built for its own job.",
@@ -195,19 +194,18 @@ export const en: Content = {
       },
       engineer: {
         architecture: [
-          // REVIEW: confirm module layout and state split with Raja.
-          "Module-based frontend: Academic, Admissions, HR, Finance and Inventory share a design system and an API layer.",
-          "Global state for cross-module data (Redux), local module state with Zustand.",
-          "Role-specific views decide which screens and actions each user sees.",
+          "Five connected modules (Academic, Admissions, HR, Finance, Inventory) in one React + TypeScript frontend.",
+          "Redux and Zustand hold the state, so data stays in sync across modules.",
+          "Role-specific views for each type of user.",
         ],
         decisions: [
           {
-            title: "Role-based views over one data model",
-            body: "Each role sees a different interface on top of the same records, so a change in Admissions is immediately correct in Finance.",
+            title: "Role-based views over shared data",
+            body: "Each role gets its own screens, built on the same records, so the modules stay in sync with each other.",
           },
           {
-            title: "Tests where money and records move",
-            body: "Unit tests with Jest and React Testing Library cover the forms and flows where a bug would cost the most.",
+            title: "Testing and documentation",
+            body: "Unit tests with Jest and React Testing Library, plus internal testing and written technical docs, reduced UI bugs.",
           },
         ],
         stack: ["React", "TypeScript", "Redux", "Zustand", "REST", "Jest", "React Testing Library"],
@@ -231,7 +229,7 @@ export const en: Content = {
         {
           src: "/work/ukm-booking/listing-mobile.jpg",
           alt: "StayUKM property search on a phone",
-          caption: "Most students book from their phone.",
+          caption: "The same search on a phone.",
           device: "mobile",
           width: 780,
           height: 1688,
@@ -259,12 +257,7 @@ export const en: Content = {
           "Node.js / Express REST API with the booking and database logic.",
           "Payment gateway integrated across client and server.",
         ],
-        decisions: [
-          {
-            title: "Owning both sides of the booking flow",
-            body: "Building the client and the API together kept availability, pricing and payment status consistent from search to receipt.",
-          },
-        ],
+        decisions: [],
         stack: ["React", "Node.js", "Express", "REST", "Payment gateway"],
       },
     },
@@ -280,7 +273,7 @@ export const en: Content = {
       },
       metrics: [],
       recruiter: {
-        problem: "The team built an app that tells people what kind of waste they are holding.",
+        problem: "The team built an app that scans waste from a photo and suggests crafts you can make from it.",
         role: "I was on the backend team and also built the admin dashboard.",
         outcome: ["Backend deployed on Google Cloud.", "Admin dashboard for managing the app's data."],
       },
@@ -376,7 +369,7 @@ export const en: Content = {
       program: "Fullstack Web Developer Bootcamp",
       start: "2023-06",
       end: "2023-12",
-      note: "Selected as 1 of 12 participants from 500+ applicants; trained in HTML, CSS, JavaScript, Express.js and React.",
+      note: "Selected as 1 of 12 participants from 500+ applicants. Training covered HTML, CSS, JavaScript, Express.js and React.",
     },
   ],
 };

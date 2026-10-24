@@ -2,8 +2,7 @@ import type { Content } from "./types";
 
 /**
  * Indonesian content. Source: Resume_Frontend_Raja_Saputera_new_2026 (Oct 2026).
- * Engineer-view details marked REVIEW are inferred from the CV and must be
- * confirmed by Raja before release.
+ * Every claim must be backed by the CV or LinkedIn. Do not add numbers or outcomes from elsewhere.
  */
 export const id: Content = {
   profile: {
@@ -28,7 +27,7 @@ export const id: Content = {
       recruiter:
         "Frontend engineer dengan pengalaman 3+ tahun membangun sistem ERP sekolah dan platform booking menggunakan React, Next.js, dan TypeScript. Saat ini saya memimpin frontend ERP 5 modul di SMA Future Gate, dan membangun platform booking yang digunakan oleh 5.000+ mahasiswa di Universiti Kebangsaan Malaysia.",
       engineer:
-        "Sebagian besar pekerjaan saya adalah UI berbasis peran: satu model data, banyak tampilan. Antarmuka Admisi, HR, keuangan, dan inventaris yang berbagi state melalui 20+ endpoint REST, formulir yang menjaga transaksi finansial nyata, serta alur booking yang harus berjalan lancar di ponsel mahasiswa.",
+        "Sebagian besar pekerjaan saya adalah UI berbasis peran: data yang sama, ditampilkan berbeda untuk tiap peran. Di sekolah, itu berarti layar PSB, HR, keuangan, dan inventaris yang berbagi state lewat 20+ REST API. Di Chup Online, itu alur booking responsif dengan pembayaran online.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
   },
@@ -42,7 +41,7 @@ export const id: Content = {
       end: null,
       project: "school-erp",
       summary: {
-        recruiter: "Memimpin frontend ERP sekolah yang digunakan oleh 400+ staf dan siswa.",
+        recruiter: "Memimpin frontend ERP sekolah dengan 400+ pengguna.",
         engineer: "Arsitektur frontend untuk 5 modul ERP dengan React + TypeScript, Redux/Zustand, 20+ REST API.",
       },
       highlights: {
@@ -73,7 +72,7 @@ export const id: Content = {
       highlights: {
         recruiter: [
           "Membangun platform booking yang digunakan oleh 5.000+ mahasiswa aktif di Universiti Kebangsaan Malaysia.",
-          "Memungkinkan pembayaran online untuk sewa asrama dan reservasi hotel secara menyeluruh.",
+          "Menambahkan pembayaran online untuk sewa asrama dan hotel, dari layar booking sampai server.",
           "Bekerja secara remote dalam tim Agile berisi 10+ developer dan desainer lintas Indonesia dan Malaysia.",
         ],
         engineer: [
@@ -92,7 +91,7 @@ export const id: Content = {
       end: "2023-07",
       project: "waste-scanner",
       summary: {
-        recruiter: "Terpilih dalam program pelatihan pimpinan Google; membangun dashboard admin dan backend cloud.",
+        recruiter: "Membangun dashboard admin dan ikut mengerjakan backend cloud di program Bangkit dari Google.",
         engineer: "Dashboard admin React di atas REST API; backend untuk aplikasi pemindai sampah yang di-deploy di GCP.",
       },
       highlights: {
@@ -144,7 +143,7 @@ export const id: Content = {
         {
           src: "/work/school-erp/home-desktop.jpg",
           alt: "Beranda ERP: sapaan, presensi, jadwal mengajar, info yayasan, aksi cepat, dan daftar modul",
-          caption: "Beranda: setiap peran mulai dari sini dan hanya melihat modul yang boleh dipakainya.",
+          caption: "Beranda, titik awal setiap peran pengguna.",
           device: "desktop",
           width: 2880,
           height: 1800,
@@ -152,7 +151,7 @@ export const id: Content = {
         {
           src: "/work/school-erp/home-mobile.jpg",
           alt: "Beranda ERP yang sama di ponsel",
-          caption: "Beranda yang sama di ponsel guru.",
+          caption: "Beranda yang sama di ponsel.",
           device: "mobile",
           width: 780,
           height: 1688,
@@ -160,7 +159,7 @@ export const id: Content = {
         {
           src: "/work/school-erp/admissions-desktop.jpg",
           alt: "Dashboard PSB berisi daftar tindakan pendaftaran, sebaran status pendaftar, dan gelombang aktif",
-          caption: "PSB: apa yang perlu ditindaklanjuti hari ini, bukan sekadar tabel.",
+          caption: "Dashboard PSB dengan pendaftaran yang perlu ditindaklanjuti hari ini.",
           device: "desktop",
           width: 2880,
           height: 1800,
@@ -180,12 +179,12 @@ export const id: Content = {
       },
       metrics: [
         { value: "5", label: "modul dirilis" },
-        { value: "400+", label: "pengguna harian" },
+        { value: "400+", label: "pengguna" },
         { value: "20+", label: "REST API terintegrasi" },
       ],
       recruiter: {
         problem:
-          "Sekolah menjalankan admisi, akademik, HR, keuangan, dan inventaris di berbagai aplikasi terpisah dan spreadsheet, sehingga staf berulang kali memasukkan data yang sama.",
+          "Sekolah butuh satu sistem untuk PSB, akademik, HR, keuangan, dan inventaris, dengan layar yang sesuai untuk tiap bagian.",
         role: "Saya memimpin frontend: arsitektur, tampilan antarmuka untuk setiap departemen, dan integrasi dengan API tim backend.",
         outcome: [
           "Setiap departemen bekerja dalam satu sistem terpadu, dengan tampilan yang dirancang sesuai alur kerjanya.",
@@ -195,19 +194,18 @@ export const id: Content = {
       },
       engineer: {
         architecture: [
-          // REVIEW: confirm module layout and state split with Raja.
-          "Frontend berbasis modul: Akademik, PPDB, HR, Keuangan, dan Inventaris berbagi design system dan layer API yang sama.",
-          "Global state untuk data lintas modul (Redux), local state per modul dengan Zustand.",
-          "Tampilan berbasis peran menentukan layar dan aksi yang dapat diakses tiap pengguna.",
+          "Lima modul yang saling terhubung (Akademik, PSB, HR, Keuangan, Inventaris) dalam satu frontend React + TypeScript.",
+          "Redux dan Zustand menyimpan state, sehingga data tetap sinkron antar modul.",
+          "Tampilan khusus untuk tiap jenis pengguna.",
         ],
         decisions: [
           {
-            title: "Antarmuka berbasis peran di atas satu model data",
-            body: "Setiap peran melihat tampilan berbeda di atas basis data yang sama, sehingga perubahan di PPDB langsung tercermin dengan tepat di Keuangan.",
+            title: "Tampilan per peran di atas data yang sama",
+            body: "Tiap peran punya layarnya sendiri, dibangun di atas data yang sama, sehingga modul-modulnya tetap sinkron.",
           },
           {
-            title: "Pengujian pada alur finansial dan pencatatan penting",
-            body: "Unit test dengan Jest dan React Testing Library memvalidasi formulir dan alur di mana bug dapat berdampak fatal.",
+            title: "Pengujian dan dokumentasi",
+            body: "Unit test dengan Jest dan React Testing Library, ditambah pengujian internal dan dokumentasi teknis, mengurangi bug UI.",
           },
         ],
         stack: ["React", "TypeScript", "Redux", "Zustand", "REST", "Jest", "React Testing Library"],
@@ -231,7 +229,7 @@ export const id: Content = {
         {
           src: "/work/ukm-booking/listing-mobile.jpg",
           alt: "Pencarian properti StayUKM di ponsel",
-          caption: "Kebanyakan mahasiswa memesan dari ponsel.",
+          caption: "Pencarian yang sama di ponsel.",
           device: "mobile",
           width: 780,
           height: 1688,
@@ -259,12 +257,7 @@ export const id: Content = {
           "REST API Node.js / Express untuk logika pemesanan dan database.",
           "Integrasi payment gateway di sisi client dan server.",
         ],
-        decisions: [
-          {
-            title: "Memegang kendali kedua sisi alur pemesanan",
-            body: "Membangun client dan API secara bersamaan menjaga ketersediaan kamar, kalkulasi harga, dan status pembayaran tetap konsisten dari pencarian hingga tanda terima.",
-          },
-        ],
+        decisions: [],
         stack: ["React", "Node.js", "Express", "REST", "Payment gateway"],
       },
     },
@@ -280,7 +273,7 @@ export const id: Content = {
       },
       metrics: [],
       recruiter: {
-        problem: "Tim membangun aplikasi yang memberi tahu jenis sampah yang dipegang pengguna.",
+        problem: "Tim membangun aplikasi yang memindai sampah dari foto dan menyarankan kerajinan yang bisa dibuat darinya.",
         role: "Saya berada di tim backend sekaligus membangun dashboard admin.",
         outcome: ["Backend di-deploy di Google Cloud.", "Dashboard admin untuk mengelola data aplikasi."],
       },
@@ -379,7 +372,7 @@ export const id: Content = {
       program: "Bootcamp Fullstack Web Developer",
       start: "2023-06",
       end: "2023-12",
-      note: "Terpilih sebagai 1 dari 12 peserta dari 500+ pendaftar; belajar HTML, CSS, JavaScript, Express.js, dan React.",
+      note: "Terpilih sebagai 1 dari 12 peserta dari 500+ pendaftar. Materinya HTML, CSS, JavaScript, Express.js, dan React.",
     },
   ],
 };
