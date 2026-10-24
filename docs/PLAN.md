@@ -73,7 +73,8 @@ Rata kiri di semua bagian; lebar teks maks ~70 karakter; grid 12 kolom, konten d
 |---|---|---|
 | `paper` | `#F2F4F3` | latar terang |
 | `ink` | `#16202B` | teks utama |
-| `slate` | `#5B6B7A` | teks sekunder, garis |
+| `slate` | `#52616F` | teks sekunder (5:1 di atas `tone`) |
+| `tone` | `#E4E9E7` | satu langkah dari `paper`: pemisah permukaan (tanpa garis) |
 | `jade` | `#0F5C4D` | aksen utama: link, peran aktif |
 | `marigold` | `#F2B705` | sorotan & focus ring (hanya untuk status, bukan dekorasi) |
 Mode gelap: `paper`↔`#121A22`, `ink`↔`#E6EBEE`, jade dicerahkan ke `#3FA58C`.
@@ -92,6 +93,13 @@ Pesan sukses form memakai kata yang sama dengan tombolnya ("Pesan terkirim").
 
 **Yang sengaja dihindari:** hero berisi angka besar + gradient, grid kartu identik dengan
 shadow sama, label "01 / 02 / 03" untuk konten yang bukan urutan, tanda "→" di setiap tombol.
+
+### Redesign Okt 2026 (taste-skill)
+Arah "Type and nothing else" dengan warna dan font tetap. Hero "garis air": FRONTEND di bidang kertas,
+ENGINEER di bidang jade, pemilih peran di bidang jade. Urutan: ledger karya (pratinjau saat hover) → pita
+screenshot besar → dua angka (400+, 5,000+) → tabel karier satu ukuran di bidang tinta → About dengan
+highlight → kalimat penutup + potret + form → footer jade dengan email raksasa. Tanpa garis tipis,
+tanpa shadow, sudut persegi, lima ukuran huruf (14 / 18 / lead / display / specimen).
 
 ## 4. Teknologi
 | Area | Pilihan | Alasan |

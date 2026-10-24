@@ -26,7 +26,8 @@
     "downloadCv": "Download CV",
     "email": "Email me",
     "github": "GitHub",
-    "readCase": "Read the ERP case study"
+    "readCase": "Read the ERP case study",
+    "headline": "Frontend\nEngineer"
   },
   "projects": {
     "title": "Projects",
@@ -43,7 +44,8 @@
     "architecture": "Architecture",
     "decisions": "Decisions",
     "stack": "Stack",
-    "notFound": "This case study doesn't exist."
+    "notFound": "This case study doesn't exist.",
+    "more": "More work"
   },
   "experience": {
     "title": "Experience",
@@ -69,7 +71,10 @@
     "errorServer": "The message wasn't sent. Try again, or email me directly at {email}."
   },
   "footer": {
-    "built": "Built with Next.js and TypeScript. Source on GitHub."
+    "built": "Built with Next.js and TypeScript. Source on GitHub.",
+    "notes": "Frontend engineer. React, Next.js, TypeScript.",
+    "top": "Back to top",
+    "place": "Lubuklinggau"
   },
   "notFound": {
     "title": "Page not found",
@@ -81,5 +86,30 @@
     "demo": "Live demo",
     "repo": "Source",
     "noImage": "No preview"
+  },
+  "work": {
+    "title": "Selected work",
+    "kindCode": "Public code",
+    "preview": "Preview of {name}"
+  },
+  "numbers": {
+    "title": "Who uses it",
+    "text": "Two systems I built are in daily use. The school ERP runs admissions, academics, HR, finance and inventory for 400+ people; the booking platform serves 5,000+ students of Universiti Kebangsaan Malaysia.",
+    "a": "people use the school ERP",
+    "b": "students on the booking platform"
+  },
+  "band": {
+    "title": "Real screens",
+    "erp": "Future Gate ERP, home screen for every role.",
+    "ukm": "StayUKM housing search on a phone."
+  },
+  "about": {
+    "title": "About"
+  },
+  "closing": {
+    "sentence": "I am looking for a frontend engineering role, remote or with relocation. Tell me about yours.",
+    "question": "Want to talk?",
+    "reply": "Lubuklinggau, Indonesia. I reply by email.",
+    "form": "Or send a message"
   }
 }

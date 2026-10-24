@@ -31,7 +31,12 @@ export type Profile = {
   intro: PerView<string>;
   /** Short stack list shown to engineers in the hero. */
   coreStack: string[];
+  /** About text: plain strings and highlighted facts, then a closing sentence that links to contact. */
+  about: PerView<AboutPart[]>;
+  aboutClose: PerView<string>;
 };
+
+export type AboutPart = string | { mark: string; tone: "soft" | "sun" | "plain" };
 
 export type Experience = {
   company: string;
@@ -54,6 +59,10 @@ export type Project = {
   title: string;
   client: string;
   period: string;
+  /** Two or three words for the work ledger, e.g. "School ERP". */
+  kind: string;
+  /** Year shown in the ledger. */
+  year: string;
   /** One sentence, shown in the project list. */
   summary: PerView<string>;
   metrics: Metric[];

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 type ViewSwitcherProps = {
   label: string;
-  hint: string;
+  hint?: string;
   names: Record<View, string>;
 };
 
@@ -55,17 +55,18 @@ export function ViewSwitcher({ label, hint, names }: ViewSwitcherProps) {
     }
   }
 
+  // Sits on the jade field: inactive options in the paper colour, the chosen one filled with it.
   return (
-    <div>
-      <p id="view-label" className="mb-3 text-base font-medium">
+    <div className="flex items-center gap-4">
+      <p id="view-label" className="text-base font-medium">
         {label}
       </p>
       <div
         role="radiogroup"
         aria-labelledby="view-label"
-        aria-describedby="view-hint"
+        aria-describedby={hint ? "view-hint" : undefined}
         onKeyDown={onKeyDown}
-        className="inline-grid grid-cols-2 rounded-lg border border-ink/20 bg-paper-raised p-1"
+        className="inline-grid grid-cols-2 bg-ink/25 p-1"
       >
         {VIEWS.map((v) => (
           <button
@@ -80,20 +81,22 @@ export function ViewSwitcher({ label, hint, names }: ViewSwitcherProps) {
             data-value={v}
             onClick={() => choose(v)}
             className={cn(
-              "min-h-12 min-w-36 rounded-md px-6 text-lg font-semibold text-slate transition-colors hover:text-ink",
-              // Styled from <html data-view> so the right button is filled before hydration.
+              "press min-h-12 min-w-32 px-5 text-base font-semibold text-on-jade hover:bg-on-jade/15",
+              // Styled from <html data-view> so the right option is filled before hydration.
               v === "recruiter"
-                ? "[html:not([data-view=engineer])_&]:bg-jade [html:not([data-view=engineer])_&]:text-paper"
-                : "[html[data-view=engineer]_&]:bg-jade [html[data-view=engineer]_&]:text-paper",
+                ? "[html:not([data-view=engineer])_&]:bg-on-jade [html:not([data-view=engineer])_&]:text-jade"
+                : "[html[data-view=engineer]_&]:bg-on-jade [html[data-view=engineer]_&]:text-jade",
             )}
           >
             {names[v]}
           </button>
         ))}
       </div>
-      <p id="view-hint" className="mt-3 max-w-[52ch] text-sm text-slate">
-        {hint}
-      </p>
+      {hint ? (
+        <p id="view-hint" className="sr-only">
+          {hint}
+        </p>
+      ) : null}
     </div>
   );
 }

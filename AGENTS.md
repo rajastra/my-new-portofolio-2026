@@ -12,7 +12,8 @@ Full plan: `docs/PLAN.md`. Content source of truth: `src/content/` (never hard-c
 ## Stack (do not swap without approval)
 - Next.js 16 (App Router, `cacheComponents`) + React 19 + TypeScript (`strict: true`)
 - Tailwind CSS v4 with our own small components in `src/components/ui` (no shadcn) + lucide-react icons
-- Animation: CSS only (the view-switch fade in `globals.css`); respect `prefers-reduced-motion`
+- Motion: CSS plus one small observer (`reveal-observer.tsx`): masked headline lines on load, `.reveal` parts that rise once,
+  `.press` feedback, `.drift` on the big screenshot. Hidden states only under `html.js` + motion allowed.
 - Content: typed TypeScript data in `src/content/{en,id}.ts` (no MDX), images in `public/`
 - next-intl for i18n: English (default) + Bahasa Indonesia; next-themes for dark mode
 - Zod for validation, react-hook-form for the contact form, Resend for email
@@ -24,9 +25,9 @@ Full plan: `docs/PLAN.md`. Content source of truth: `src/content/` (never hard-c
 src/
   app/[locale]/        # page.tsx (home), projects/[slug]/ (case studies), opengraph-image, not-found
   app/api/contact/     # route handler (Resend)
-  components/ui/       # Section, Only (per-view content), ButtonLink
+  components/ui/       # Only (per-view content), ButtonLink (one square button shape)
   components/view/     # role view switcher + pre-paint script
-  components/sections/ # Hero, ProjectList, OpenSource, ExperienceTimeline, Skills, Contact
+  components/sections/ # Hero (waterline), WorkLedger, PictureBand, TwoNumbers, CareerTable, About, Contact
   components/work/     # ShotGallery (case study screenshots)
   content/             # types.ts, en.ts, id.ts (same shape; content.test.ts checks parity)
   messages/            # en.json, id.json (UI strings, same keys)
@@ -46,9 +47,12 @@ Login sessions live in `.auth/` (gitignored) and must never be committed.
 - Types for all content objects live in `src/content/types.ts`.
 - Use `next/image` and `next/font`; no layout shift (CLS ~0).
 - Accessibility: semantic HTML, visible focus, alt text, color contrast AA.
-- Design tokens (colors, font, type scale) are defined in `docs/PLAN.md` §3 and live in
+- Design direction: taste-skill "Type and nothing else" (`.taste-skill/direction.json`, see PLAN.md §3).
+  Gate: `node <taste-skill>/scripts/inspect.mjs <url>` must report 0 FAIL on home and case studies.
+- Design tokens (colors, font, five type steps) are defined in `docs/PLAN.md` §3 and live in
   `src/app/globals.css` (`@theme`). Use only these tokens; never ship card grids with shadows,
-  gradient decorations, ALL-CAPS labels, or per-section fade-up animations. Touch targets ≥ 44px.
+  gradient decorations, ALL-CAPS labels, hairline dividers, or one identical fade pasted on every
+  block (reveals are staggered per part instead). Touch targets ≥ 44px.
 - Content items carry two variants: `recruiter` (impact, plain language) and `engineer`
   (stack, decisions). The active view comes from `?view=` in the URL.
 - No new dependencies without a stated reason in the PR/commit message.

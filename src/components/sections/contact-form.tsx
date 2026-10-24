@@ -48,7 +48,7 @@ export function ContactForm({ email }: { email: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-6 sm:grid-cols-2" noValidate>
       <div>
         <label htmlFor="name" className="block text-base font-medium text-ink">
           {t("name")}
@@ -59,10 +59,10 @@ export function ContactForm({ email }: { email: string }) {
           {...register("name")}
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "name-error" : undefined}
-          className="mt-2 block w-full min-h-11 rounded-md border border-ink/25 bg-paper-raised px-3 text-base text-ink focus:border-jade focus:outline-none focus:ring-1 focus:ring-jade"
+          className="mt-2 block min-h-14 w-full bg-paper-raised px-4 text-base text-ink"
         />
         {errors.name?.message && (
-          <p id="name-error" className="mt-1 text-sm text-red-600">
+          <p id="name-error" className="mt-1 text-sm text-[#b42318] dark:text-[#ff8a7a]">
             {t(errors.name.message as ContactErrorKey)}
           </p>
         )}
@@ -78,16 +78,16 @@ export function ContactForm({ email }: { email: string }) {
           {...register("email")}
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "email-error" : undefined}
-          className="mt-2 block w-full min-h-11 rounded-md border border-ink/25 bg-paper-raised px-3 text-base text-ink focus:border-jade focus:outline-none focus:ring-1 focus:ring-jade"
+          className="mt-2 block min-h-14 w-full bg-paper-raised px-4 text-base text-ink"
         />
         {errors.email?.message && (
-          <p id="email-error" className="mt-1 text-sm text-red-600">
+          <p id="email-error" className="mt-1 text-sm text-[#b42318] dark:text-[#ff8a7a]">
             {t(errors.email.message as ContactErrorKey)}
           </p>
         )}
       </div>
 
-      <div>
+      <div className="sm:col-span-2">
         <label htmlFor="message" className="block text-base font-medium text-ink">
           {t("message")}
         </label>
@@ -97,10 +97,10 @@ export function ContactForm({ email }: { email: string }) {
           {...register("message")}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
-          className="mt-2 block w-full rounded-md border border-ink/25 bg-paper-raised p-3 text-base text-ink focus:border-jade focus:outline-none focus:ring-1 focus:ring-jade"
+          className="mt-2 block w-full bg-paper-raised p-4 text-base text-ink"
         />
         {errors.message?.message && (
-          <p id="message-error" className="mt-1 text-sm text-red-600">
+          <p id="message-error" className="mt-1 text-sm text-[#b42318] dark:text-[#ff8a7a]">
             {t(errors.message.message as ContactErrorKey)}
           </p>
         )}
@@ -118,12 +118,12 @@ export function ContactForm({ email }: { email: string }) {
       </div>
 
       {status === "error" && (
-        <p role="alert" className="text-sm text-red-600">
+        <p role="alert" className="text-sm sm:col-span-2 text-[#b42318] dark:text-[#ff8a7a]">
           {t("errorServer", { email })}
         </p>
       )}
 
-      <div>
+      <div className="sm:col-span-2">
         <button
           type="submit"
           disabled={isSubmitting}

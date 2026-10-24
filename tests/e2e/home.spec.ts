@@ -48,6 +48,8 @@ test.describe("Home page & role view switcher", () => {
   });
 
   test("a11y: no serious or critical violations on / and case study", async ({ page }) => {
+    // Measure the settled page: with motion on, axe would sample text mid-fade.
+    await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/");
     const homeScan = await new AxeBuilder({ page }).analyze();
     const homeViolations = homeScan.violations.filter(

@@ -24,12 +24,46 @@ export const en: Content = {
     },
     headline: "I build interfaces that change with the person using them.",
     intro: {
-      recruiter:
-        "Frontend engineer with 3+ years of experience building school ERP systems and booking platforms with React, Next.js and TypeScript. I currently lead the frontend of a 5-module ERP at Future Gate High School, and I built the booking platform used by 5,000+ students at Universiti Kebangsaan Malaysia.",
-      engineer:
-        "Most of my work is role-based UI: the same data, shown differently to each role. At the school that means admissions, HR, finance and inventory screens that share state across 20+ REST APIs. At Chup Online it was a responsive booking flow with online payment.",
+      recruiter: "I build school ERP systems and booking platforms with React, Next.js and TypeScript.",
+      engineer: "Role-based UI in React and TypeScript, with shared state across 20+ REST APIs.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
+    about: {
+      recruiter: [
+        "I'm Raja Saputera, a frontend engineer from ",
+        { mark: "Lubuklinggau, Indonesia", tone: "soft" },
+        " with ",
+        { mark: "3+ years", tone: "sun" },
+        " of experience. Since 2023 I have led the frontend of the school ERP at ",
+        { mark: "Future Gate High School", tone: "soft" },
+        ": five modules, from admissions to payroll, used by 400+ people. Before that I built a dormitory and hotel booking platform for students of ",
+        { mark: "Universiti Kebangsaan Malaysia", tone: "plain" },
+        " in a remote team of ten, covering both the React screens and the Node.js API, online payment included. I trained in Google's ",
+        { mark: "Bangkit Academy", tone: "sun" },
+        " and worked on the redesign of the DPR website at DOT Indonesia. I work in ",
+        { mark: "React, Next.js and TypeScript", tone: "plain" },
+        ", write unit tests, and am used to Agile teams spread across two countries. I am open to remote work and relocation.",
+      ],
+      engineer: [
+        "I'm Raja Saputera. Most of my work is role-based UI: ",
+        { mark: "the same records, shown differently", tone: "sun" },
+        " to admissions, HR, finance and inventory staff. At ",
+        { mark: "Future Gate High School", tone: "soft" },
+        " I lead a five-module frontend in ",
+        { mark: "React and TypeScript", tone: "plain" },
+        ", with state in Redux and Zustand kept in sync across 20+ REST APIs, and unit tests in Jest and React Testing Library. At ",
+        { mark: "Chup Online", tone: "soft" },
+        " I built both sides of a booking platform for 5,000+ UKM students: the responsive React client, the ",
+        { mark: "Node.js and Express API", tone: "plain" },
+        ", and the payment gateway between them. Earlier I built a React admin dashboard and a backend deployed on ",
+        { mark: "Google Cloud", tone: "sun" },
+        " in the Bangkit program, and Next.js pages for the DPR website revamp. Day to day I use Git, GitLab and Jira.",
+      ],
+    },
+    aboutClose: {
+      recruiter: "If your team needs a frontend engineer, let's talk.",
+      engineer: "If you want to talk about the code, write to me.",
+    },
   },
 
   experience: [
@@ -138,6 +172,8 @@ export const en: Content = {
       title: "School ERP",
       client: "Future Gate High School",
       period: "2023 – now",
+      kind: "School ERP",
+      year: "2023",
       confidential: true,
       shots: [
         {
@@ -216,6 +252,8 @@ export const en: Content = {
       title: "Dorm & hotel booking",
       client: "Chup Online, for Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
+      kind: "Booking platform",
+      year: "2024",
       confidential: true,
       shots: [
         {
@@ -263,9 +301,11 @@ export const en: Content = {
     },
     {
       slug: "waste-scanner",
-      title: "Waste-scanning app backend & admin dashboard",
+      title: "ReWaste capstone",
       client: "Bangkit Academy capstone",
       period: "2023",
+      kind: "Capstone app",
+      year: "2023",
       confidential: false,
       summary: {
         recruiter: "Capstone project in Google's Bangkit program: an app that identifies waste from a photo.",
@@ -292,6 +332,8 @@ export const en: Content = {
       title: "DPR website revamp",
       client: "DOT Indonesia",
       period: "2023",
+      kind: "Public website",
+      year: "2023",
       confidential: true,
       summary: {
         recruiter: "Redesign of the Indonesian House of Representatives website.",

@@ -24,12 +24,46 @@ export const id: Content = {
     },
     headline: "Saya membangun antarmuka yang berubah sesuai siapa yang memakainya.",
     intro: {
-      recruiter:
-        "Frontend engineer dengan pengalaman 3+ tahun membangun sistem ERP sekolah dan platform booking menggunakan React, Next.js, dan TypeScript. Saat ini saya memimpin frontend ERP 5 modul di SMA Future Gate, dan membangun platform booking yang digunakan oleh 5.000+ mahasiswa di Universiti Kebangsaan Malaysia.",
-      engineer:
-        "Sebagian besar pekerjaan saya adalah UI berbasis peran: data yang sama, ditampilkan berbeda untuk tiap peran. Di sekolah, itu berarti layar PSB, HR, keuangan, dan inventaris yang berbagi state lewat 20+ REST API. Di Chup Online, itu alur booking responsif dengan pembayaran online.",
+      recruiter: "Saya membangun sistem ERP sekolah dan platform booking dengan React, Next.js, dan TypeScript.",
+      engineer: "UI berbasis peran dengan React dan TypeScript, dengan state bersama di 20+ REST API.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
+    about: {
+      recruiter: [
+        "Saya Raja Saputera, frontend engineer dari ",
+        { mark: "Lubuklinggau, Indonesia", tone: "soft" },
+        " dengan pengalaman ",
+        { mark: "3+ tahun", tone: "sun" },
+        ". Sejak 2023 saya memimpin frontend ERP sekolah di ",
+        { mark: "Future Gate High School", tone: "soft" },
+        ": lima modul, dari PSB sampai penggajian, dipakai oleh 400+ pengguna. Sebelumnya saya membangun platform booking asrama dan hotel untuk mahasiswa ",
+        { mark: "Universiti Kebangsaan Malaysia", tone: "plain" },
+        " bersama tim remote berisi sepuluh orang, dari layar React sampai API Node.js, termasuk pembayaran online. Saya ikut pelatihan ",
+        { mark: "Bangkit Academy", tone: "sun" },
+        " dari Google dan mengerjakan redesign situs web DPR di DOT Indonesia. Saya bekerja dengan ",
+        { mark: "React, Next.js, dan TypeScript", tone: "plain" },
+        ", menulis unit test, dan terbiasa dengan tim Agile di dua negara. Saya terbuka untuk kerja remote dan relokasi.",
+      ],
+      engineer: [
+        "Saya Raja Saputera. Sebagian besar pekerjaan saya adalah UI berbasis peran: ",
+        { mark: "data yang sama, ditampilkan berbeda", tone: "sun" },
+        " untuk staf PSB, HR, keuangan, dan inventaris. Di ",
+        { mark: "Future Gate High School", tone: "soft" },
+        " saya memimpin frontend lima modul dengan ",
+        { mark: "React dan TypeScript", tone: "plain" },
+        ", dengan state di Redux dan Zustand yang tetap sinkron di 20+ REST API, serta unit test dengan Jest dan React Testing Library. Di ",
+        { mark: "Chup Online", tone: "soft" },
+        " saya membangun kedua sisi platform booking untuk 5.000+ mahasiswa UKM: client React yang responsif, ",
+        { mark: "API Node.js dan Express", tone: "plain" },
+        ", dan payment gateway di antaranya. Sebelumnya saya membangun dashboard admin React dan backend yang di-deploy di ",
+        { mark: "Google Cloud", tone: "sun" },
+        " dalam program Bangkit, serta halaman Next.js untuk revamp situs DPR. Sehari-hari saya memakai Git, GitLab, dan Jira.",
+      ],
+    },
+    aboutClose: {
+      recruiter: "Kalau tim Anda butuh frontend engineer, mari bicara.",
+      engineer: "Kalau ingin membahas kodenya, kirimi saya pesan.",
+    },
   },
 
   experience: [
@@ -138,6 +172,8 @@ export const id: Content = {
       title: "ERP Sekolah",
       client: "Future Gate High School",
       period: "2023 – sekarang",
+      kind: "ERP sekolah",
+      year: "2023",
       confidential: true,
       shots: [
         {
@@ -216,6 +252,8 @@ export const id: Content = {
       title: "Booking asrama & hotel",
       client: "Chup Online, untuk Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
+      kind: "Platform booking",
+      year: "2024",
       confidential: true,
       shots: [
         {
@@ -263,9 +301,11 @@ export const id: Content = {
     },
     {
       slug: "waste-scanner",
-      title: "Backend & dashboard aplikasi pemindai sampah",
+      title: "Capstone ReWaste",
       client: "Capstone Bangkit Academy",
       period: "2023",
+      kind: "Aplikasi capstone",
+      year: "2023",
       confidential: false,
       summary: {
         recruiter: "Proyek capstone program Bangkit dari Google: aplikasi pendeteksi jenis sampah dari foto.",
@@ -295,6 +335,8 @@ export const id: Content = {
       title: "Revamp situs web DPR",
       client: "DOT Indonesia",
       period: "2023",
+      kind: "Situs publik",
+      year: "2023",
       confidential: true,
       summary: {
         recruiter: "Desain ulang situs web Dewan Perwakilan Rakyat (DPR) RI.",

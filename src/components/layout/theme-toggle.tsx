@@ -12,7 +12,7 @@ export function ThemeToggle({ toLight, toDark }: ThemeToggleProps) {
     <button
       type="button"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="inline-flex size-11 items-center justify-center rounded-md text-slate hover:text-ink"
+      className="press inline-flex size-11 items-center justify-center text-slate hover:text-ink"
     >
       {/* Both icons render; CSS shows the right one so there's no hydration mismatch. */}
       <Sun aria-hidden className="hidden size-5 dark:block" />

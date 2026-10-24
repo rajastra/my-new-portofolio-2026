@@ -11,10 +11,10 @@ export function ShotFrame({ shot, sizes, priority }: { shot: Shot; sizes: string
       target="_blank"
       rel="noopener"
       className={cn(
-        "block overflow-hidden bg-paper-raised transition-[border-color]",
+        "block overflow-hidden bg-paper-raised press transition-colors",
         mobile
           ? "rounded-[1.6rem] border-[6px] border-ink/85 hover:border-jade"
-          : "rounded-lg border border-rule hover:border-jade",
+          : "bg-tone p-2 hover:bg-jade-soft",
       )}
     >
       <Image

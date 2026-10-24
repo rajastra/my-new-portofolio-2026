@@ -26,7 +26,8 @@
     "downloadCv": "Unduh CV",
     "email": "Kirim email",
     "github": "GitHub",
-    "readCase": "Baca studi kasus ERP"
+    "readCase": "Baca studi kasus ERP",
+    "headline": "Frontend\nEngineer"
   },
   "projects": {
     "title": "Proyek",
@@ -43,7 +44,8 @@
     "architecture": "Arsitektur",
     "decisions": "Keputusan",
     "stack": "Stack",
-    "notFound": "Studi kasus ini tidak ada."
+    "notFound": "Studi kasus ini tidak ada.",
+    "more": "Karya lain"
   },
   "experience": {
     "title": "Pengalaman",
@@ -69,7 +71,10 @@
     "errorServer": "Pesan belum terkirim. Coba lagi, atau email langsung ke {email}."
   },
   "footer": {
-    "built": "Dibuat dengan Next.js dan TypeScript. Kode ada di GitHub."
+    "built": "Dibuat dengan Next.js dan TypeScript. Kode ada di GitHub.",
+    "notes": "Frontend engineer. React, Next.js, TypeScript.",
+    "top": "Kembali ke atas",
+    "place": "Lubuklinggau"
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",
@@ -81,5 +86,30 @@
     "demo": "Demo live",
     "repo": "Kode",
     "noImage": "Tanpa pratinjau"
+  },
+  "work": {
+    "title": "Karya pilihan",
+    "kindCode": "Kode publik",
+    "preview": "Pratinjau {name}"
+  },
+  "numbers": {
+    "title": "Siapa yang memakai",
+    "text": "Dua sistem yang saya bangun dipakai setiap hari. ERP sekolah menjalankan PSB, akademik, HR, keuangan, dan inventaris untuk 400+ pengguna; platform booking melayani 5.000+ mahasiswa Universiti Kebangsaan Malaysia.",
+    "a": "pengguna ERP sekolah",
+    "b": "mahasiswa di platform booking"
+  },
+  "band": {
+    "title": "Layar asli",
+    "erp": "ERP Future Gate, beranda untuk setiap peran.",
+    "ukm": "Pencarian hunian StayUKM di ponsel."
+  },
+  "about": {
+    "title": "Tentang"
+  },
+  "closing": {
+    "sentence": "Saya sedang mencari posisi frontend engineer, remote atau dengan relokasi. Ceritakan posisi yang Anda tawarkan.",
+    "question": "Mau ngobrol?",
+    "reply": "Lubuklinggau, Indonesia. Saya membalas lewat email.",
+    "form": "Atau kirim pesan"
   }
 }
