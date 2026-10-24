@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Raja Saputera — Frontend Engineer",
+    "description": "Frontend engineer building role-based interfaces with React, Next.js and TypeScript: school ERP systems and booking platforms."
+  },
+  "nav": {
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact",
+    "skip": "Skip to content",
+    "language": "Bahasa Indonesia",
+    "languageShort": "ID",
+    "themeLight": "Switch to light theme",
+    "themeDark": "Switch to dark theme"
+  },
+  "view": {
+    "label": "View as",
+    "recruiter": "Recruiter",
+    "engineer": "Engineer",
+    "hint": "The page rewrites itself for the person reading it, the same way the interfaces I build do."
+  },
+  "hero": {
+    "downloadCv": "Download CV",
+    "email": "Email me",
+    "github": "GitHub",
+    "readCase": "Read the ERP case study"
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Client work is under NDA, so these case studies describe the problem and the approach instead of showing source code.",
+    "confidential": "Client work, no public source",
+    "open": "Open case study"
+  },
+  "project": {
+    "back": "All projects",
+    "problem": "The problem",
+    "role": "My role",
+    "outcome": "Outcome",
+    "architecture": "Architecture",
+    "decisions": "Decisions",
+    "stack": "Stack",
+    "notFound": "This case study doesn't exist."
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "caseStudy": "Case study"
+  },
+  "skills": {
+    "title": "Skills",
+    "education": "Education"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Hiring for a frontend role, or have a project in mind? Send a message and I'll reply within two working days.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "sent": "Message sent. I'll reply to your email within two working days.",
+    "errorName": "Enter your name.",
+    "errorEmail": "Enter an email address like name@company.com.",
+    "errorMessage": "Write at least 20 characters so I know what it's about.",
+    "errorServer": "The message wasn't sent. Try again, or email me directly at {email}."
+  },
+  "footer": {
+    "built": "Built with Next.js and TypeScript. Source on GitHub."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Raja Saputera — Frontend Engineer",
+    "description": "Frontend engineer yang membangun antarmuka berbasis peran dengan React, Next.js, dan TypeScript: sistem ERP sekolah dan platform booking."
+  },
+  "nav": {
+    "projects": "Proyek",
+    "experience": "Pengalaman",
+    "skills": "Keahlian",
+    "contact": "Kontak",
+    "skip": "Langsung ke konten",
+    "language": "English",
+    "languageShort": "EN",
+    "themeLight": "Ganti ke tema terang",
+    "themeDark": "Ganti ke tema gelap"
+  },
+  "view": {
+    "label": "Lihat sebagai",
+    "recruiter": "Recruiter",
+    "engineer": "Engineer",
+    "hint": "Halaman ini menyesuaikan isinya dengan siapa yang membaca, sama seperti antarmuka yang saya bangun."
+  },
+  "hero": {
+    "downloadCv": "Unduh CV",
+    "email": "Kirim email",
+    "github": "GitHub",
+    "readCase": "Baca studi kasus ERP"
+  },
+  "projects": {
+    "title": "Proyek",
+    "intro": "Pekerjaan klien terikat NDA, jadi studi kasus ini menjelaskan masalah dan pendekatannya, bukan kode sumbernya.",
+    "confidential": "Proyek klien, kode tidak publik",
+    "open": "Buka studi kasus"
+  },
+  "project": {
+    "back": "Semua proyek",
+    "problem": "Masalahnya",
+    "role": "Peran saya",
+    "outcome": "Hasil",
+    "architecture": "Arsitektur",
+    "decisions": "Keputusan",
+    "stack": "Stack",
+    "notFound": "Studi kasus ini tidak ada."
+  },
+  "experience": {
+    "title": "Pengalaman",
+    "present": "Sekarang",
+    "caseStudy": "Studi kasus"
+  },
+  "skills": {
+    "title": "Keahlian",
+    "education": "Pendidikan"
+  },
+  "contact": {
+    "title": "Kontak",
+    "intro": "Sedang mencari frontend engineer, atau punya proyek? Kirim pesan dan saya balas dalam dua hari kerja.",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "send": "Kirim pesan",
+    "sending": "Mengirim…",
+    "sent": "Pesan terkirim. Saya akan membalas ke email Anda dalam dua hari kerja.",
+    "errorName": "Isi nama Anda.",
+    "errorEmail": "Isi alamat email seperti nama@perusahaan.com.",
+    "errorMessage": "Tulis minimal 20 karakter supaya saya tahu maksud pesannya.",
+    "errorServer": "Pesan belum terkirim. Coba lagi, atau email langsung ke {email}."
+  },
+  "footer": {
+    "built": "Dibuat dengan Next.js dan TypeScript. Kode ada di GitHub."
+  }
+}
