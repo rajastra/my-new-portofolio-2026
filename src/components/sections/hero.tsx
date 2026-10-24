@@ -13,8 +13,9 @@ export async function Hero({ locale, profile }: { locale: Locale; profile: Profi
 
   return (
     <section aria-labelledby="hero-title" className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 md:pb-28 md:pt-24">
-      <div className="grid items-end gap-8 md:grid-cols-12">
-        <div className="md:col-span-8">
+      {/* Name line and portrait share a top edge; the portrait sits right next to the headline. */}
+      <div className="grid items-start gap-8 md:grid-cols-12">
+        <div className="md:col-span-8 lg:col-span-9">
           <div className="flex items-center gap-4">
             {/* Small portrait on phones; the large one sits in the right column on wider screens. */}
             <Image
@@ -33,20 +34,20 @@ export async function Hero({ locale, profile }: { locale: Locale; profile: Profi
           </div>
           <h1
             id="hero-title"
-            className="mt-4 max-w-[18ch] text-3xl font-semibold tracking-[-0.025em] text-balance md:text-4xl lg:text-[3.815rem] lg:leading-[1.02]"
+            className="mt-4 max-w-[22ch] text-3xl font-semibold tracking-[-0.025em] text-balance md:text-4xl lg:text-[3.815rem] lg:leading-[1.02]"
           >
             {profile.headline}
           </h1>
         </div>
-        <div className="hidden md:col-span-3 md:col-start-10 md:block">
+        <div className="hidden md:col-span-4 md:block lg:col-span-3">
           <Image
             src={profile.photo.src}
             alt={profile.photo.alt}
             width={profile.photo.width}
             height={profile.photo.height}
-            sizes="(min-width: 1152px) 260px, 22vw"
+            sizes="(min-width: 1152px) 260px, 30vw"
             priority
-            className="aspect-[4/5] w-full rounded-lg object-cover object-top"
+            className="aspect-[4/5] w-full max-w-[260px] rounded-lg border border-rule object-cover object-top md:ml-auto"
           />
         </div>
       </div>
