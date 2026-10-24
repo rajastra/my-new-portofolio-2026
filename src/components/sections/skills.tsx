@@ -33,7 +33,9 @@ export async function Skills({
             <li key={edu.school} className="py-6">
               <div className="grid gap-1 md:grid-cols-12 md:gap-6">
                 <div className="text-sm text-slate md:col-span-3">
-                  {formatMonth(edu.start, locale)} – {formatMonth(edu.end, locale)}
+                  {edu.start && edu.end
+                    ? `${formatMonth(edu.start, locale)} – ${formatMonth(edu.end, locale)}`
+                    : null}
                 </div>
                 <div className="md:col-span-9">
                   <p className="font-semibold text-ink">{edu.program}</p>

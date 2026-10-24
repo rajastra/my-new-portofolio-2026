@@ -89,8 +89,9 @@ export type SkillGroup = { name: string; items: string[] };
 export type Education = {
   school: string;
   program: string;
-  start: string;
-  end: string;
+  /** Optional: the CV lists the degree without dates. */
+  start?: string;
+  end?: string;
   note?: string;
 };
 

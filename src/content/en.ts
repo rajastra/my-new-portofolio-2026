@@ -1,7 +1,7 @@
 import type { Content } from "./types";
 
 /**
- * English content. Source: LinkedIn profile (Oct 2026).
+ * English content. Source: Resume_Frontend_Raja_Saputera_new_2026 (Oct 2026).
  * Engineer-view details marked REVIEW are inferred from the CV and must be
  * confirmed by Raja before release.
  */
@@ -15,7 +15,7 @@ export const en: Content = {
       width: 960,
       height: 1200,
     },
-    location: "Jakarta, Indonesia",
+    location: "Lubuklinggau, Indonesia",
     availability: "Open to remote work and relocation",
     email: "rajasaputera@gmail.com",
     links: {
@@ -60,8 +60,8 @@ export const en: Content = {
       stack: ["React", "TypeScript", "Redux", "Zustand", "REST", "Jest", "RTL"],
     },
     {
-      company: "Chup",
-      role: "Software Engineer (remote)",
+      company: "Chup Online",
+      role: "Software Developer (remote)",
       place: "Malaysia",
       start: "2024-09",
       end: "2025-06",
@@ -89,7 +89,7 @@ export const en: Content = {
       role: "Cloud Computing cohort",
       place: "Indonesia",
       start: "2023-02",
-      end: "2023-08",
+      end: "2023-07",
       project: "waste-scanner",
       summary: {
         recruiter: "Selected for Google-led training; built an admin dashboard and a cloud backend.",
@@ -112,7 +112,7 @@ export const en: Content = {
       role: "Frontend Engineer (internship)",
       place: "Indonesia",
       start: "2023-02",
-      end: "2023-03",
+      end: "2023-04",
       project: "dpr-revamp",
       summary: {
         recruiter: "Worked on the redesign of the Indonesian House of Representatives (DPR) website.",
@@ -130,22 +130,6 @@ export const en: Content = {
         ],
       },
       stack: ["React", "Next.js", "SCSS"],
-    },
-    {
-      company: "Institut Teknologi Sumatera",
-      role: "Computer lab assistant",
-      place: "South Lampung, Indonesia",
-      start: "2021-02",
-      end: "2022-02",
-      summary: {
-        recruiter: "Taught algorithms and data structures labs to fellow students.",
-        engineer: "Lab assistant for Algorithms, Data Structures and Intro to Computing courses.",
-      },
-      highlights: {
-        recruiter: ["Wrote exercises, explained material and graded assignments."],
-        engineer: ["Wrote exercises and graded assignments for Algorithms and Data Structures."],
-      },
-      stack: [],
     },
   ],
 
@@ -232,7 +216,7 @@ export const en: Content = {
     {
       slug: "ukm-booking",
       title: "Dorm & hotel booking",
-      client: "Chup, for Universiti Kebangsaan Malaysia",
+      client: "Chup Online, for Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
       confidential: true,
       shots: [
@@ -373,8 +357,8 @@ export const en: Content = {
   ],
 
   skills: [
-    { name: "Languages", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS"] },
-    { name: "Frameworks", items: ["React", "Next.js", "Node.js", "Express"] },
+    { name: "Languages", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS / SASS"] },
+    { name: "Frameworks", items: ["React (Hooks)", "Next.js", "Node.js", "Express"] },
     { name: "State", items: ["Redux", "Zustand", "Context API"] },
     { name: "Testing", items: ["Jest", "React Testing Library"] },
     { name: "Practices", items: ["REST API integration", "OOP", "Dependency injection", "Agile / Scrum"] },
@@ -384,16 +368,15 @@ export const en: Content = {
   education: [
     {
       school: "Institut Teknologi Sumatera",
-      program: "Bachelor's degree, Computer Science",
-      start: "2020-09",
-      end: "2024-09",
+      program: "Bachelor of Computer Science",
+      note: "Relevant coursework: Web Programming, Software Engineering, OOP, Data Structures & Algorithms, Human-Computer Interaction, Database Systems, Cloud Computing.",
     },
     {
-      school: "Impact Byte",
-      program: "Fullstack Web Developer program",
+      school: "Skilvul",
+      program: "Fullstack Web Developer Bootcamp",
       start: "2023-06",
       end: "2023-12",
-      note: "Selected as 1 of 12 participants from 500+ applicants.",
+      note: "Selected as 1 of 12 participants from 500+ applicants; trained in HTML, CSS, JavaScript, Express.js and React.",
     },
   ],
 };

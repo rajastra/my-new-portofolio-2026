@@ -1,7 +1,7 @@
 import type { Content } from "./types";
 
 /**
- * Indonesian content. Source: LinkedIn profile (Oct 2026).
+ * Indonesian content. Source: Resume_Frontend_Raja_Saputera_new_2026 (Oct 2026).
  * Engineer-view details marked REVIEW are inferred from the CV and must be
  * confirmed by Raja before release.
  */
@@ -15,7 +15,7 @@ export const id: Content = {
       width: 960,
       height: 1200,
     },
-    location: "Jakarta, Indonesia",
+    location: "Lubuklinggau, Indonesia",
     availability: "Terbuka untuk kerja remote dan relokasi",
     email: "rajasaputera@gmail.com",
     links: {
@@ -60,8 +60,8 @@ export const id: Content = {
       stack: ["React", "TypeScript", "Redux", "Zustand", "REST", "Jest", "RTL"],
     },
     {
-      company: "Chup",
-      role: "Software Engineer (remote)",
+      company: "Chup Online",
+      role: "Software Developer (remote)",
       place: "Malaysia",
       start: "2024-09",
       end: "2025-06",
@@ -89,7 +89,7 @@ export const id: Content = {
       role: "Cloud Computing cohort",
       place: "Indonesia",
       start: "2023-02",
-      end: "2023-08",
+      end: "2023-07",
       project: "waste-scanner",
       summary: {
         recruiter: "Terpilih dalam program pelatihan pimpinan Google; membangun dashboard admin dan backend cloud.",
@@ -112,7 +112,7 @@ export const id: Content = {
       role: "Frontend Engineer (internship)",
       place: "Indonesia",
       start: "2023-02",
-      end: "2023-03",
+      end: "2023-04",
       project: "dpr-revamp",
       summary: {
         recruiter: "Berkontribusi dalam pembaruan desain situs web Dewan Perwakilan Rakyat (DPR) RI.",
@@ -130,22 +130,6 @@ export const id: Content = {
         ],
       },
       stack: ["React", "Next.js", "SCSS"],
-    },
-    {
-      company: "Institut Teknologi Sumatera",
-      role: "Computer lab assistant",
-      place: "South Lampung, Indonesia",
-      start: "2021-02",
-      end: "2022-02",
-      summary: {
-        recruiter: "Mengajar praktikum algoritma dan struktur data untuk sesama mahasiswa.",
-        engineer: "Asisten lab untuk mata kuliah Algoritma, Struktur Data, dan Pengantar Komputasi.",
-      },
-      highlights: {
-        recruiter: ["Menyusun soal latihan, menjelaskan materi, dan menilai tugas praktikum."],
-        engineer: ["Menyusun soal latihan dan menilai tugas untuk mata kuliah Algoritma dan Struktur Data."],
-      },
-      stack: [],
     },
   ],
 
@@ -232,7 +216,7 @@ export const id: Content = {
     {
       slug: "ukm-booking",
       title: "Booking asrama & hotel",
-      client: "Chup, untuk Universiti Kebangsaan Malaysia",
+      client: "Chup Online, untuk Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
       confidential: true,
       shots: [
@@ -376,8 +360,8 @@ export const id: Content = {
   ],
 
   skills: [
-    { name: "Bahasa", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS"] },
-    { name: "Framework", items: ["React", "Next.js", "Node.js", "Express"] },
+    { name: "Bahasa", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS / SCSS / SASS"] },
+    { name: "Framework", items: ["React (Hooks)", "Next.js", "Node.js", "Express"] },
     { name: "State", items: ["Redux", "Zustand", "Context API"] },
     { name: "Testing", items: ["Jest", "React Testing Library"] },
     { name: "Praktik", items: ["Integrasi REST API", "OOP", "Dependency injection", "Agile / Scrum"] },
@@ -387,16 +371,15 @@ export const id: Content = {
   education: [
     {
       school: "Institut Teknologi Sumatera",
-      program: "Sarjana Komputer, Teknik Informatika",
-      start: "2020-09",
-      end: "2024-09",
+      program: "Sarjana Ilmu Komputer",
+      note: "Mata kuliah relevan: Pemrograman Web, Rekayasa Perangkat Lunak, OOP, Struktur Data & Algoritma, Interaksi Manusia dan Komputer, Sistem Basis Data, Cloud Computing.",
     },
     {
-      school: "Impact Byte",
-      program: "Program Fullstack Web Developer",
+      school: "Skilvul",
+      program: "Bootcamp Fullstack Web Developer",
       start: "2023-06",
       end: "2023-12",
-      note: "Terpilih sebagai 1 dari 12 peserta dari 500+ pendaftar.",
+      note: "Terpilih sebagai 1 dari 12 peserta dari 500+ pendaftar; belajar HTML, CSS, JavaScript, Express.js, dan React.",
     },
   ],
 };

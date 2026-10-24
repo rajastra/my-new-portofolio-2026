@@ -125,10 +125,11 @@ Sengaja **tidak** dipakai: CMS headless, database, state manager global (tidak p
 | 5. Kualitas | Test e2e + a11y, Lighthouse, review lintas-model | agy generate test, Claude jalankan & review |
 | 6. Rilis | Domain, Vercel, update link di CV & LinkedIn | Kamu + Claude |
 
-## 6. Hal yang perlu dicek sebelum rilis
-Ada perbedaan kecil antara CV dan LinkedIn — samakan dulu:
-- Lulus S1: CV "Nov 2025" vs LinkedIn "Sep 2024".
-- Bootcamp: CV "Skilvul" vs LinkedIn "Impact Byte".
-- Bangkit selesai: Jul vs Agu 2023. DOT selesai: Apr vs Mar 2023.
-- Lokasi: CV "Lubuklinggau" vs LinkedIn "Jakarta Metropolitan Area".
-- Email: rajasaputera@gmail.com (pakai yang mana untuk kontak?).
+## 6. Sumber data
+Sumber kebenaran konten: **Resume_Frontend_Raja_Saputera_new_2026.pdf** (Okt 2026), juga
+tersedia di `public/cv/raja-saputera-cv.pdf`. Lokasi Lubuklinggau, Chup Online (Software
+Developer), Bangkit Feb–Jul 2023, DOT Feb–Apr 2023, bootcamp Skilvul, S1 tanpa tanggal.
+LinkedIn masih berbeda (Jakarta, Impact Byte, lulus Sep 2024) — samakan LinkedIn dengan CV.
+
+Masih terbuka: metrik "20+ REST APIs" dan "5 modul" (aplikasi kini punya 7 modul) — ganti
+dengan angka nyata (jumlah peran, halaman, endpoint) di CV dan portofolio sekaligus.
