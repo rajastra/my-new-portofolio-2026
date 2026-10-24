@@ -15,4 +15,4 @@ export function formatMonth(iso: string, locale: string) {
   }).format(new Date(Date.UTC(y, m - 1, 1)));
 }
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rajasaputera.me";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.rajasaputera.me";
