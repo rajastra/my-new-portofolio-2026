@@ -91,13 +91,10 @@ html[data-view="engineer"] [data-only="recruiter"] {
 
 /* Animate only right after the reader switches view, never on page load. */
 html.view-switching [data-only] {
-  /* Outgoing content hides at once (no layout jump); incoming fades in. */
-  transition:
-    opacity 280ms ease,
-    translate 280ms ease;
+  /* Outgoing content hides at once; incoming only fades (no movement, which read as a glitch). */
+  transition: opacity 200ms ease-out;
   @starting-style {
     opacity: 0;
-    translate: 0 6px;
   }
 }
 
