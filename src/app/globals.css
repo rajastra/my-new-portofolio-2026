@@ -40,7 +40,7 @@
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 
   /* Type scale, ratio 1.25 */
-  --text-sm: 0.8rem;
+  --text-sm: 0.875rem;
   --text-sm--line-height: 1.5;
   --text-base: 1rem;
   --text-base--line-height: 1.6;
@@ -89,11 +89,12 @@ html[data-view="engineer"] [data-only="recruiter"] {
   display: none;
 }
 
-[data-only] {
+/* Animate only right after the reader switches view, never on page load. */
+html.view-switching [data-only] {
+  /* Outgoing content hides at once (no layout jump); incoming fades in. */
   transition:
     opacity 280ms ease,
-    translate 280ms ease,
-    display 280ms allow-discrete;
+    translate 280ms ease;
   @starting-style {
     opacity: 0;
     translate: 0 6px;
@@ -101,7 +102,7 @@ html[data-view="engineer"] [data-only="recruiter"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-only] {
+  html.view-switching [data-only] {
     transition: none;
   }
   html {

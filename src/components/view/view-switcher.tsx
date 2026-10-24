@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { useRef, useSyncExternalStore, type KeyboardEvent } from "react";
 import { VIEWS, type View } from "@/content/types";
 import { cn } from "@/lib/utils";
 
@@ -10,30 +10,41 @@ type ViewSwitcherProps = {
   names: Record<View, string>;
 };
 
+const VIEW_EVENT = "viewchange";
+
+function subscribe(onChange: () => void) {
+  window.addEventListener(VIEW_EVENT, onChange);
+  return () => window.removeEventListener(VIEW_EVENT, onChange);
+}
+
 function readView(): View {
   return document.documentElement.dataset.view === "engineer" ? "engineer" : "recruiter";
 }
 
+let switchTimer: ReturnType<typeof setTimeout> | undefined;
+
 export function applyView(view: View) {
-  document.documentElement.dataset.view = view;
+  const root = document.documentElement;
+  root.classList.add("view-switching");
+  clearTimeout(switchTimer);
+  switchTimer = setTimeout(() => root.classList.remove("view-switching"), 400);
+  root.dataset.view = view;
   try {
     localStorage.setItem("view", view);
   } catch {}
   const url = new URL(window.location.href);
   url.searchParams.set("view", view);
   window.history.replaceState(window.history.state, "", url);
+  window.dispatchEvent(new Event(VIEW_EVENT));
 }
 
 export function ViewSwitcher({ label, hint, names }: ViewSwitcherProps) {
-  const [view, setView] = useState<View>("recruiter");
+  // <html data-view> is the source of truth (the inline script may set it before hydration).
+  const view = useSyncExternalStore(subscribe, readView, () => "recruiter" as View);
   const refs = useRef<Record<View, HTMLButtonElement | null>>({ recruiter: null, engineer: null });
-
-  // The inline script may already have chosen a view before hydration.
-  useEffect(() => setView(readView()), []);
 
   function choose(next: View, focus = false) {
     applyView(next);
-    setView(next);
     if (focus) refs.current[next]?.focus();
   }
 

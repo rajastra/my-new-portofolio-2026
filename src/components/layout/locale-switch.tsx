@@ -12,7 +12,8 @@ export function LocaleSwitch({ target, label, short }: LocaleSwitchProps) {
       href={pathname}
       locale={target}
       hrefLang={target}
-      aria-label={label}
+      // Name must contain the visible text (WCAG 2.5.3).
+      aria-label={`${short}, ${label}`}
       className="inline-flex size-10 items-center justify-center rounded-md text-sm font-semibold text-slate hover:text-ink"
     >
       {short}
