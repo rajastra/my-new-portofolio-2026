@@ -17,7 +17,11 @@ export async function Hero({ locale, profile }: { locale: Locale; profile: Profi
   const [first, second] = t("headline").split("\n");
 
   return (
-    <section aria-labelledby="hero-title" className="flex min-h-[calc(100svh-4.5rem)] flex-col bg-jade">
+    // Phones: a shorter hero so the start of the work list shows on the first screen.
+    <section
+      aria-labelledby="hero-title"
+      className="flex min-h-[68svh] flex-col bg-jade md:min-h-[calc(100svh-4.5rem)]"
+    >
       {/* Paper field above the first line; grows so the seam sits near the middle. */}
       <div className="flex-1 bg-paper" />
 

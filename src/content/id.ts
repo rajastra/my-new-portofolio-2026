@@ -24,7 +24,7 @@ export const id: Content = {
     },
     headline: "Saya membangun antarmuka yang berubah sesuai siapa yang memakainya.",
     intro: {
-      recruiter: "Saya membangun sistem ERP sekolah dan platform booking dengan React, Next.js, dan TypeScript.",
+      recruiter: "Saya Raja. Saya membangun sistem ERP sekolah dan platform booking dengan React, Next.js, dan TypeScript.",
       engineer: "UI berbasis peran dengan React dan TypeScript, dengan state bersama di 20+ REST API.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
@@ -172,7 +172,7 @@ export const id: Content = {
       title: "ERP Sekolah",
       client: "Future Gate High School",
       period: "2023 – sekarang",
-      kind: "ERP sekolah",
+      kind: "Lead frontend, 5 modul",
       year: "2023",
       confidential: true,
       shots: [
@@ -252,7 +252,7 @@ export const id: Content = {
       title: "Booking asrama & hotel",
       client: "Chup Online, untuk Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
-      kind: "Platform booking",
+      kind: "Full-stack, pembayaran online",
       year: "2024",
       confidential: true,
       shots: [
@@ -304,7 +304,7 @@ export const id: Content = {
       title: "Capstone ReWaste",
       client: "Capstone Bangkit Academy",
       period: "2023",
-      kind: "Aplikasi capstone",
+      kind: "Backend dan dashboard admin",
       year: "2023",
       confidential: false,
       summary: {
@@ -335,7 +335,7 @@ export const id: Content = {
       title: "Revamp situs web DPR",
       client: "DOT Indonesia",
       period: "2023",
-      kind: "Situs publik",
+      kind: "Frontend intern",
       year: "2023",
       confidential: true,
       summary: {

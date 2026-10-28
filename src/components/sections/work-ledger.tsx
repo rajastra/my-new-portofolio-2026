@@ -43,19 +43,26 @@ export async function WorkLedger({
       image: p.shots?.[0],
       internal: `/projects/${p.slug}`,
     })),
-    ...openSource.map((o) => ({
-      key: o.repo,
-      name: o.name,
-      kind: t("kindCode"),
-      stack: o.stack.slice(0, 3).join(", "),
-      year: o.year,
-      image: o.image,
-      external: o.demo ?? o.repo,
-    })),
+    // A repo already linked from a case study is not listed twice.
+    ...openSource
+      .filter((o) => !projects.some((p) => p.links?.some((l) => l.href === o.repo)))
+      .map((o) => ({
+        key: o.repo,
+        name: o.name,
+        kind: t("kindCode"),
+        stack: o.stack.slice(0, 3).join(", "),
+        year: o.year,
+        image: o.image,
+        external: o.demo ?? o.repo,
+      })),
   ];
 
   return (
-    <section id="work" aria-labelledby="work-title" className="px-4 py-[clamp(7.5rem,14vh,12rem)] sm:px-7">
+    <section
+      id="work"
+      aria-labelledby="work-title"
+      className="px-4 pb-[clamp(7.5rem,14vh,12rem)] pt-16 sm:px-7 md:pt-[clamp(7.5rem,14vh,12rem)]"
+    >
       <div className="mx-auto grid max-w-[90rem] md:grid-cols-12 md:gap-x-6">
         <div className="md:col-span-12 lg:col-span-6 lg:col-start-3">
           <h2 id="work-title" className="reveal text-lead font-medium">
@@ -65,7 +72,10 @@ export async function WorkLedger({
             {rows.map((row, index) => {
               const cells = (
                 <>
-                  <span className="font-medium">{row.name}</span>
+                  {/* Underlined so the row reads as a link without hovering, on phones too. */}
+                  <span className="font-medium underline decoration-ink/30 decoration-1 underline-offset-[0.25em] group-hover/row:decoration-jade">
+                    {row.name}
+                  </span>
                   <span className="col-span-2 text-sm text-slate md:col-span-1 md:text-base">
                     <Only view="recruiter" as="span">
                       {row.kind}
@@ -74,11 +84,13 @@ export async function WorkLedger({
                       {row.stack}
                     </Only>
                   </span>
-                  <span className="col-start-2 row-start-1 tabular-nums md:col-start-3 md:text-right">{row.year}</span>
+                  <span className="col-start-2 row-start-1 tabular-nums md:col-start-3 md:text-right">
+                    {row.year}
+                  </span>
                 </>
               );
               const rowClass =
-                "press relative grid min-h-13 grid-cols-[1fr_auto] items-center gap-x-4 py-2 transition-colors duration-150 md:min-h-11 md:grid-cols-[55%_1fr_4rem] md:py-1.5 group-hover/ledger:text-slate hover:!text-ink focus-visible:!text-ink";
+                "press relative grid min-h-13 grid-cols-[1fr_auto] items-center gap-x-4 py-2 transition-colors duration-150 md:min-h-11 md:grid-cols-[40%_1fr_4rem] md:py-1.5 group-hover/ledger:text-slate hover:!text-ink focus-visible:!text-ink";
               return (
                 <li
                   key={row.key}

@@ -24,7 +24,7 @@ export const en: Content = {
     },
     headline: "I build interfaces that change with the person using them.",
     intro: {
-      recruiter: "I build school ERP systems and booking platforms with React, Next.js and TypeScript.",
+      recruiter: "I'm Raja. I build school ERP systems and booking platforms with React, Next.js and TypeScript.",
       engineer: "Role-based UI in React and TypeScript, with shared state across 20+ REST APIs.",
     },
     coreStack: ["TypeScript", "React", "Next.js", "Redux", "Zustand", "Node.js / Express", "Jest + RTL", "GCP"],
@@ -172,7 +172,7 @@ export const en: Content = {
       title: "School ERP",
       client: "Future Gate High School",
       period: "2023 – now",
-      kind: "School ERP",
+      kind: "Frontend lead, 5 modules",
       year: "2023",
       confidential: true,
       shots: [
@@ -252,7 +252,7 @@ export const en: Content = {
       title: "Dorm & hotel booking",
       client: "Chup Online, for Universiti Kebangsaan Malaysia",
       period: "2024 – 2025",
-      kind: "Booking platform",
+      kind: "Full-stack, online payment",
       year: "2024",
       confidential: true,
       shots: [
@@ -304,7 +304,7 @@ export const en: Content = {
       title: "ReWaste capstone",
       client: "Bangkit Academy capstone",
       period: "2023",
-      kind: "Capstone app",
+      kind: "Backend and admin dashboard",
       year: "2023",
       confidential: false,
       summary: {
@@ -332,7 +332,7 @@ export const en: Content = {
       title: "DPR website revamp",
       client: "DOT Indonesia",
       period: "2023",
-      kind: "Public website",
+      kind: "Frontend intern",
       year: "2023",
       confidential: true,
       summary: {
